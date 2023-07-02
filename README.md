@@ -115,27 +115,70 @@ Tendrás que usar React Router para crear una página o ruta específica para es
         </ul>
 <br>
 
+## Ideas
+
+<ol>
+<li> [] General </li>
+[] Usar una temática general <br>
+[] Western? <br>
+[] Western futuristico <br>
+[] Estilo ciberpunk <br>
+[] Medieval <br>
+[] 80s <br>
+[] Fallout <br>
+
+<li> [] Tres en raya </li>
+[] Emojis en base a la temática <br>
+[] Si western pues fichas casino <br>
+Tres en raya
+
+<li> [] Ahorcado </li>
+[] Crear un state que almacene el número de vidas <br>
+[] A través del usestate crear un array que refleje las vidas y la secuencia <br>
+[] Secuencia de imágenes para el ahorcado <br>
+[] Un duelo por ejemplo, o un lazo que se tira al ahorcado <br>
+
+<li> [] Sudoku </li>
+[] Aplicar el estilo general <br>
+</ol>
+
 ## Pasos
 
-ideas
+<ol>
+<li> [] HTML </li>
+[] Código redactado en REACT <br>
+[] Metdatos <br>
 
-usar una temática general
-western por ej
-western futuristico
+<li> [] CSS </li>
+[] General <br>
+[] Componentes <br>
+[] Pages <br>
+[] Root limpio <br>
+[] Propiedades de acuerdo al root <br>
+[] Medias queries <br>
 
-Tres en raya
-emojis en base a la temática
-si western pues fichas casino
+<li> [] REACT </li>
+[] General <br>
+[] Componentes <br>
+[] Pages <br>
+[] Investigar hooks <br>
+<br>
 
-Ahorcado
-para el ahorcado una secuencia de imágenes (un usesate que va sumando)
-a través del usestate crear un array que refleje las vidas y la secuencia
-relacionado con tematica
-we
-un duelo por ejemplo
-o un lazo que se tira al ahorcado
+<li> [] Componentes y pages finalizados y comentados </li>
+[] App <br>
+[] Main <br>
+[] Index <br>
+<br>
 
-sudoku del estilo general
+<li> [] Diseño </li>
+[] Estilos generales <br>
+[] Iconos generales <br>
+[] Fuentes tipográficas <br>
 
-
-✅
+<li> [] General </li>
+[] Carpetas organizadas <br>
+[] Componentes separados <br>
+[] Código comentado <br>
+[] Repasar app, main e index <br>
+[] README final <br>
+</ol>
