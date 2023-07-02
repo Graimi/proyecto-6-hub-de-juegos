@@ -1,0 +1,47 @@
+.gm-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gm-gap-container);
+}
+
+.gm-home-games {
+  display: flex;
+  gap: var(--gm-gap-container);
+}
+
+.gm-home-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--gm-padding-card);
+    gap: var(--gm-gap-container);
+    width: 250px;
+    border: var(--gm-border-card-style);
+    border-radius: var(--gm-radius-general);
+  }
+
+.gm-home-game-text {
+  display: flex;
+  flex-direction: row;
+  /* gap: 10%; */
+  /* justify-content: space-between; */
+}
+
+.gm-home-game-icon {
+  width: var(--gm-img-big);
+  /* opacity: var(--gm-opacity-img); */
+  mix-blend-mode: overlay;
+}
+
+#tictactoe {
+    background-color: var(--gm-color-yelllow);
+}
+
+#hangman {
+    background-color: var(--gm-color-red);
+}
+
+#sudoku {
+    background-color: var(--gm-color-purple);
+}

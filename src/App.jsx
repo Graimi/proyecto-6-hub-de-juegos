@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <main>
         <Outlet />
       </main>
@@ -16,10 +16,3 @@ function App() {
 }
 
 export default App;
-
-// RUTA PARA VOLVER
-// In <Project> @ /home/project/123	Resolved <a href>
-// <Link to="abc">	/home/project/123/abc
-// <Link to=".">	/home/project/123
-// <Link to="..">	/home
-// <Link to=".." relative="path">	/home/project
