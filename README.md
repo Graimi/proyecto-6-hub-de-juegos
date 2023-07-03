@@ -11,7 +11,7 @@ Este proyecto puede llevarse al alcance que cada cual estime posible dentro de l
 ## Requerimentos
 <ul>
 <li> [] TRES EN RAYA </li>
-Tendrás que usar React Router para crear una página o ruta específica para este juego en /tictactoe. En la pantalla encontraremos:<br>
+[✅] Tendrás que usar React Router para crear una página o ruta específica para este juego en /tictactoe. En la pantalla encontraremos:<br>
 [] 1. Un botón para comenzar partida, que dependa del estado isStarted, esta será un boolean. Si el juego ha comenzado, el botón debe poder acabar la partida en cualquier momento y resetear la información. <br>
 [] 2. Un mensaje que indique el jugador actual. Como en este juego usaremos el símbolo X para un jugador y el O para otro (¡puedes cambiarlos a tu gusto, usa emojis si prefieres!), informaremos de esto en el mensaje.  Por ejemplo: Es el turno de X o Es el turno de O.<br>
 [] 3. Un tablero que será un estado que actualizaremos, y consistirá de un array de arrays de 3x3 en el que tendremos cada casilla o celda con un valor inicial null, aquí un ejemplo <br>
@@ -86,7 +86,7 @@ Tendrás que usar React Router para crear una página o ruta específica para es
 <li> [] CRITERIOS DE ACEPTACIÓN </li>
 [] 1. Tu proyecto debe estar desplegado en **Netlify** y superar los siguientes criterios de aceptación para que el equipo de Rock{theCode} te certifique como Frontend Developer. <br>
 [] 2. Veré una Home en la que se muestran los tres juegos enumerados.<br>
-    - [] La Home tendrá un Link apuntando a cada ruta juego para navegar en la aplicación.<br>
+    - [✅] La Home tendrá un Link apuntando a cada ruta juego para navegar en la aplicación.<br>
 [] 3.En la ruta `/tictactoe` encontraré un Tres en Raya que será jugable.<br>
     - [] Podré empezar nueva partida pulsando un botón.<br>
     - [] El jugador que comienza se seleccionará de forma alreatoria (random).<br>
