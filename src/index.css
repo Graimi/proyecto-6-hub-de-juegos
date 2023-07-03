@@ -3,7 +3,7 @@
   --gm-color-white: #f8f8f8;
   --gm-color-blue: #cfe7fe;
   --gm-color-blue-dark: #5f68d1;
-  --gm-color-yelllow: #ffd782;
+  --gm-color-yelllow: #f5c764;
   --gm-color-red: #f98c96;
   --gm-color-purple: #bc8cf9;
   --gm-color-black: #131313;
@@ -104,7 +104,7 @@ dd {
 }
 
 h1 {
-  color: var(--gm-color-primary);
+  color: var(--gm-color-blue-dark);
   font-family: var(--gm-typography-heading);
   font-size: var(--gm-typography-h1);
   font-weight: var(--gm-weight-h1);
@@ -114,7 +114,7 @@ h1 {
 }
 
 h2 {
-  color: var(--gm-color-primary);
+  color: var(--gm-color-blue-dark);
   font-family: var(--gm-typography-heading);
   font-size: var(--gm-typography-h2);
   font-weight: var(--gm-weight-h2);
@@ -132,7 +132,7 @@ h3 {
 }
 
 p {
-  color: var(--gm-color-primary);
+  /* color: var(--gm-color-primary); */
   font-family: var(--gm-typography-body);
   font-size: var(--gm-typography-p);
   font-weight: var(--gm-weight-p);
@@ -140,9 +140,9 @@ p {
   opacity: var(--gm-opacity-general);
 }
 
-/* Aplicamos el efecto de transparencia a las fuentes */
-h1,
-h2,
+/* Aplicamos el efecto de overlay a las fuentes */
+/* h1, */
+/* h2, */
 h3,
 p {
   mix-blend-mode: overlay;

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Home() {
   return (
     <div className="gm-home">
-      <h1>Juegos</h1>
+      <h1>Pasatiempos</h1>
       <div className="gm-home-games">
         <Link to="tictactoe">
           <article className="gm-home-game" id="tictactoe">
@@ -29,7 +29,7 @@ function Home() {
             <img
               className="gm-home-game-icon"
               src="https://res.cloudinary.com/dwsffp1eq/image/upload/v1688316035/Hub%20de%20juegos/verdugo_m91wrf.png"
-              alt="Tic Tac Toe"
+              alt="Hangman"
             />
           </article>
         </Link>
@@ -42,7 +42,7 @@ function Home() {
             <img
               className="gm-home-game-icon"
               src="https://res.cloudinary.com/dwsffp1eq/image/upload/v1688316035/Hub%20de%20juegos/sudoku_bknmsw.png"
-              alt="Tic Tac Toe"
+              alt="Sudoku"
             />
           </article>
         </Link>
