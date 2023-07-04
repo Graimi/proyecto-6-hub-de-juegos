@@ -3,65 +3,63 @@ import './TicTacToe.css';
 import { Link } from 'react-router-dom';
 
 function TicTacToe() {
-  const [isStarted, setIsStarted] = useState(Boolean);
-  const [player, setPlayer] = useState('❎');
+  // const [isStarted, setIsStarted] = useState(false);
+  const [player, setPlayer] = useState('');
+  const [data, setData] = useState([null, null, null, null, null, null, null, null, null]);
 
-  const gameBoard = [
-    [null, null, null],
-    [null, null, null],
-    [null, null, null]
-  ];
+  function getRandomPlayer() {
+    const players = ['❎', '🔴'];
+    const randomIndex = Math.floor(Math.random() * players.length);
+    return players[randomIndex];
+  }
 
-  // const cells = document.querySelectorAll('.cell');
+  function resetData() {
+    setData([null, null, null, null, null, null, null, null, null]);
+    const board = document.querySelector('.gm-tictactoe-board');
+    board.style.display = 'grid';
+    setPlayer(getRandomPlayer());
+  }
 
-  // Datos para el tablero
-  let data = [null, null, null, null, null, null, null, null, null];
-
-  // // Actualizar los valores de las celdas
-  // cells.forEach((cell, index) => {
-  //   <button type="button" className="cell"></button>;
-  //   // cell.textContent = data[index];
-  // });
+  function checkWinner() {
+    // const winningCombinations = [
+    console.log(data[0], data[1], data[2]);
+    // if ((data[0] === '🔴') & (data[1] === '🔴') & (data[2] === '🔴')) {
+    if ((data[0] == data[1]) == data[2]) {
+      console.log('ganador', { player });
+      resetData();
+    }
+  }
 
   return (
-    <div>
-      <h1>TicTacToe</h1>
-
+    <div className="gm-tictactoe">
+      <h1>Tres en raya</h1>
+      {/* <button type="button">Empezar partida</button> */}
       {/* <button type="reset"><p>Nueva partida</p></button> */}
-      <div id="board" className="board">
+      <div id="board" className="gm-tictactoe-board">
         {data.map((space, index) => {
           return (
             // eslint-disable-next-line jsx-a11y/control-has-associated-label
             <button
               type="button"
+              id="cell"
               className={`cell-${index}`}
               onClick={() => {
-                const cell = document.querySelector(`.cell-${index}`);
+                // const updatedData = [...data];
+                // updatedData[index] = player;
+                // setData(updatedData);
                 data[index] = `${player}`;
-                cell.innerHTML = `${player}`;
                 setPlayer(player === '❎' ? '🔴' : '❎');
                 console.log(data);
+                checkWinner();
               }}
             >
               {space}
             </button>
           );
         })}
-        {/* <div className="cell" />
-        <div className="cell" />
-        <div className="cell" />
-        <div className="cell" />
-        <div className="cell" />
-        <div className="cell" />
-        <div className="cell" />
-        <div className="cell" />
-        <div className="cell" />
-        <button type="button" className="cell"></button> */}
       </div>
-      <button
-        type="button"
-        onClick={() => (data = [null, null, null, null, null, null, null, null, null])}
-      >
+      <h3>Turno: {player}</h3>
+      <button type="button" onClick={() => resetData()}>
         <p>Nueva partida</p>
       </button>
       <Link to="/">Volver</Link>

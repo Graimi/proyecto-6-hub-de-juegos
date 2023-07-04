@@ -20,6 +20,8 @@
   /* 🔴 TYPOGRAPHY TYPE */
 
   --gm-typography-heading: 'Sen', sans-serif;
+  /* lato */
+  /* square peg */
   --gm-typography-body: 'Albert Sans', sans-serif;
 
   /* 🔴 FONT WEIGHT */
@@ -106,6 +108,7 @@ dd {
 h1 {
   color: var(--gm-color-blue-dark);
   font-family: var(--gm-typography-heading);
+  font-family: Lato, cursive;
   font-size: var(--gm-typography-h1);
   font-weight: var(--gm-weight-h1);
   text-transform: uppercase;
@@ -116,6 +119,7 @@ h1 {
 h2 {
   color: var(--gm-color-blue-dark);
   font-family: var(--gm-typography-heading);
+  font-family: Lato, cursive;
   font-size: var(--gm-typography-h2);
   font-weight: var(--gm-weight-h2);
   line-height: var(--gm-typography-h2-leading);
