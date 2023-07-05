@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import './TicTacToe.css';
 import { Link } from 'react-router-dom';
 
+// Creamos la función para el juego Tres en Raya
 function TicTacToe() {
-  // const [isStarted, setIsStarted] = useState(false);
+  // Creamos los estados para el juego
   const [player, setPlayer] = useState('');
   const [data, setData] = useState([null, null, null, null, null, null, null, null, null]);
+  const [winnerMessage, setWinnerMessage] = useState('');
 
   const winningCombinations = [
     // Combinaciones horizontales
@@ -38,10 +40,23 @@ function TicTacToe() {
     winningCombinations.forEach((combination) => {
       const [index1, index2, index3] = combination;
       if (data[index1] === player && data[index2] === player && data[index3] === player) {
-        console.log(`Ganador: ${player}`);
+        // const board = document.querySelector('.gm-tictactoe');
+        // board.innerHTML += `<p>Ganador: ${player}</p>`;
+        // console.log(`Ganador: ${player}`);
+        // setShowWinner(true);
+        // setTimeout(() => {
+        //   alert(`¡Ganador: ${player}!`);
+        //   resetData();
+        // }, 100);
+        // alert(`¡Ganador: ${player}!`);
+        setWinnerMessage(`¡El ganador es: ${player}!`);
         resetData();
       }
     });
+  }
+
+  function closeWinnerMessage() {
+    setWinnerMessage('');
   }
 
   return (
@@ -77,6 +92,14 @@ function TicTacToe() {
         <p>Nueva partida</p>
       </button>
       <Link to="/">Volver</Link>
+      {winnerMessage && (
+        <div className="winner-message">
+          <p>{winnerMessage}</p>
+          <button type="button" onClick={closeWinnerMessage}>
+            Cerrar
+          </button>
+        </div>
+      )}
     </div>
   );
 }

@@ -45,3 +45,32 @@
 #sudoku {
     background-color: var(--gm-color-purple);
 }
+
+/* TABLET DISPLAY */
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .gm-home {
+    overflow: auto;
+    margin-top: 0;
+  }
+  .gm-home-games {
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+
+  }
+
+  .app {
+    overflow: auto;
+  }
+
+}
+
+/* MOBILE DISPLAY */
+@media screen and (max-width: 425px) {
+  .gm-home {
+    overflow: scroll;
+  }
+  .gm-home-games {
+    flex-direction: column;
+
+  }
+}
