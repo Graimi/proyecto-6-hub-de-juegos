@@ -10,11 +10,11 @@ Este proyecto puede llevarse al alcance que cada cual estime posible dentro de l
 
 ## Requerimentos
 <ul>
-<li> [] TRES EN RAYA </li>
+<li> [✅] TRES EN RAYA </li>
 [✅] Tendrás que usar React Router para crear una página o ruta específica para este juego en /tictactoe. En la pantalla encontraremos:<br>
-[] 1. Un botón para comenzar partida, que dependa del estado isStarted, esta será un boolean. Si el juego ha comenzado, el botón debe poder acabar la partida en cualquier momento y resetear la información. <br>
-[] 2. Un mensaje que indique el jugador actual. Como en este juego usaremos el símbolo X para un jugador y el O para otro (¡puedes cambiarlos a tu gusto, usa emojis si prefieres!), informaremos de esto en el mensaje.  Por ejemplo: Es el turno de X o Es el turno de O.<br>
-[] 3. Un tablero que será un estado que actualizaremos, y consistirá de un array de arrays de 3x3 en el que tendremos cada casilla o celda con un valor inicial null, aquí un ejemplo <br>
+[✅] 1. Un botón para comenzar partida, que dependa del estado isStarted (yo he usado otra forma), esta será un boolean. Si el juego ha comenzado, el botón debe poder acabar la partida en cualquier momento y resetear la información. <br>
+[✅] 2. Un mensaje que indique el jugador actual. Como en este juego usaremos el símbolo X para un jugador y el O para otro (¡puedes cambiarlos a tu gusto, usa emojis si prefieres!), informaremos de esto en el mensaje.  Por ejemplo: Es el turno de X o Es el turno de O.<br>
+[✅] 3. Un tablero que será un estado que actualizaremos, y consistirá de un array de arrays de 3x3 en el que tendremos cada casilla o celda con un valor inicial null, aquí un ejemplo <br>
 
     [
         [null, null, null],
@@ -22,7 +22,7 @@ Este proyecto puede llevarse al alcance que cada cual estime posible dentro de l
         [null, null, null],
     ]
 
-[] 4. Cada celda podrá ser un botón que, al ser clickado, añada el símbolo del jugador al array: <br>
+[✅] 4. Cada celda podrá ser un botón que, al ser clickado, añada el símbolo del jugador al array: <br>
 
     [
         ['X', null, null],
@@ -30,18 +30,18 @@ Este proyecto puede llevarse al alcance que cada cual estime posible dentro de l
         [null, null, 'O'],
     ]
 
-[] 5. Usando un sistema de turnos a través de otro elemento del estado, validaremos si el juego ha terminado cuando un jugador haya conseguido que su símbolo correspondiente esté repetido en las siguientes condiciones:.<br>
+[✅] 5. Usando un sistema de turnos a través de otro elemento del estado, validaremos si el juego ha terminado cuando un jugador haya conseguido que su símbolo correspondiente esté repetido en las siguientes condiciones:.<br>
 
     1 - Todas las celdas de una fila son del mismo símbolo
     2 - Todas las celdas de una columna son del mismo símbolo
     3 - Todas las celdas de una diagonal son del mismo símbolo
 
-[] 6. Te recomendamos comprobar cada caso por separado siempre que un jugador cualquiera añada un nuevo símbolo al tablero (useEffect podría ser buena idea para lanzar la comprobación).<br>
-[] 7. Cuando el tablero se llene sin un jugador ganador, tendremos un empate y el juego terminará y todo volverá al estado original.<br>
+[✅] 6. Te recomendamos comprobar cada caso por separado siempre que un jugador cualquiera añada un nuevo símbolo al tablero (useEffect podría ser buena idea para lanzar la comprobación).<br>
+[✅] 7. Cuando el tablero se llene sin un jugador ganador, tendremos un empate y el juego terminará y todo volverá al estado original.<br>
 
 <li> [] EL AHORCADO </li>
-Tendrás que usar React Router para crear una página o ruta específica para este juego en /hangman.<br>
-Para empezar, te recomendamos que busques una lista de N palabras (10 como mínimo) para jugar al ahorcado.<br>
+[✅] Tendrás que usar React Router para crear una página o ruta específica para este juego en /hangman.<br>
+[✅] Para empezar, te recomendamos que busques una lista de N palabras (10 como mínimo) para jugar al ahorcado.<br>
 Ahora, esperaremos que la pantalla contenga:<br>
 [] 1. Crea un botón de empezar partida que al ser clickado recoja una palabra aleatoria del array de palabras y genere la pista inicial:<br>
     

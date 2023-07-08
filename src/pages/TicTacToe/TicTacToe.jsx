@@ -34,7 +34,7 @@ function TicTacToe() {
   // Función encargada de resetear las casillas de juego
   function resetData() {
     setData([null, null, null, null, null, null, null, null, null]);
-    const board = document.querySelector('.none');
+    const board = document.querySelector('.gm-tictactoe-none');
     board.style.display = 'flex';
     setPlayer(getRandomPlayer());
   }
@@ -65,14 +65,14 @@ function TicTacToe() {
   return (
     <div className="gm-tictactoe">
       <h1>Tres en raya</h1>
-      <div className="none">
-        <div id="board" className="gm-tictactoe-board">
+      <article className="gm-tictactoe-game">
+        <div id="gm-tictactoe-board" className="gm-tictactoe-board">
           {data.map((space, index) => {
             return (
               // eslint-disable-next-line jsx-a11y/control-has-associated-label
               <button
                 type="button"
-                id="cell"
+                id="gm-tictactoe-cell"
                 className={`cell-${index}`}
                 onClick={() => {
                   if (data[index] === null) {
@@ -91,14 +91,14 @@ function TicTacToe() {
           })}
         </div>
         <h3>Turno: {player}</h3>
-      </div>
+      </article>
       <button type="button" onClick={() => resetData()}>
         <p>Nueva partida</p>
       </button>
       <Link to="/">Volver</Link>
       {/* Lanzamos el mensaje cuando haya ganador */}
       {winnerMessage && (
-        <div className="winner-message">
+        <div className="gm-tictactoe-winner">
           <p>{winnerMessage}</p>
           <button type="button" onClick={closeWinnerMessage}>
             Cerrar
