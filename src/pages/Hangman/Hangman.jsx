@@ -108,10 +108,6 @@ function Hangman() {
     vocabularyDefault();
   }
 
-  // useEffect(() => {
-  //   setHint(word);
-  // }, [word]);
-
   function vocabularyClick(letter) {
     console.log('Letter', letter);
     console.log(word);

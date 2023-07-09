@@ -149,7 +149,7 @@ p {
 /* h2, */
 h3,
 p {
-  mix-blend-mode: overlay;
+  /* mix-blend-mode: overlay; */
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */

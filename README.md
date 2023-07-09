@@ -60,7 +60,7 @@ Ahora, esperaremos que la pantalla contenga:<br>
     npm i sudoku
 
 [] 2. Esta librería genera un array de un solo nivel con `81` celdas, es decir, `9x9` elementos que podremos renderizar sin problemas 🎉 Algunos números vienen ya en el array y tendremos que sustituir los valores `null` por nuevos números adecuados según el usuario lo complete en la interfaz.<br>
-[] 3. Para generar el tablero inicial que debemos renderizar, hay que usar un estado, no te preocupes por ello que ya te dejamos esta pista también, queremos que te centres en React principalmente:<br>
+[✅] 3. Para generar el tablero inicial que debemos renderizar, hay que usar un estado, no te preocupes por ello que ya te dejamos esta pista también, queremos que te centres en React principalmente:<br>
 
     const [sudokuBoard, setSudokuBoard] = useState(null);
     
@@ -69,8 +69,8 @@ Ahora, esperaremos que la pantalla contenga:<br>
         setSudokuBoard(newBoard);
     }, []);
 
-[] 4. Ahora tendrás que maquetar por medio de CSS y JSX, el tablero (recomendamos que uses botones o inputs), para que un usuario pueda introducir un número del 1 al 9 en el sudoku. Te dejamos libertad para decidir como hacerlo, pero debes permitir que vaya rellenando las casillas vacías hasta completar el sudoku. <br>
-[] 5. La función que comprueba si el sudoku se ha completado es parte de la librería también:<br>
+[✅] 4. Ahora tendrás que maquetar por medio de CSS y JSX, el tablero (recomendamos que uses botones o inputs), para que un usuario pueda introducir un número del 1 al 9 en el sudoku. Te dejamos libertad para decidir como hacerlo, pero debes permitir que vaya rellenando las casillas vacías hasta completar el sudoku. <br>
+[✅] 5. La función que comprueba si el sudoku se ha completado es parte de la librería también:<br>
 
     // Comprobamos si solved es truthy, y sudokuBoard está correctamente solucionado
     const solved = sudoku.solvepuzzle(sudokuBoard);
@@ -81,7 +81,7 @@ Ahora, esperaremos que la pantalla contenga:<br>
     - Ver la solución y acabar la partida.
     - Seguir intentándolo y comprobar más tarde.
 
-[] 8. Por último, añade un botón para empezar una nueva partida siempre que queramos, pisando los datos anteriores de nuestro estado.<br>
+[✅] 8. Por último, añade un botón para empezar una nueva partida siempre que queramos, pisando los datos anteriores de nuestro estado.<br>
 
 <li> [] CRITERIOS DE ACEPTACIÓN </li>
 [] 1. Tu proyecto debe estar desplegado en **Netlify** y superar los siguientes criterios de aceptación para que el equipo de Rock{theCode} te certifique como Frontend Developer. <br>
