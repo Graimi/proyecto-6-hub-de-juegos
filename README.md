@@ -39,7 +39,7 @@ Este proyecto puede llevarse al alcance que cada cual estime posible dentro de l
 [✅] 6. Te recomendamos comprobar cada caso por separado siempre que un jugador cualquiera añada un nuevo símbolo al tablero (useEffect podría ser buena idea para lanzar la comprobación).<br>
 [✅] 7. Cuando el tablero se llene sin un jugador ganador, tendremos un empate y el juego terminará y todo volverá al estado original.<br>
 
-<li> [] EL AHORCADO </li>
+<li> [✅] EL AHORCADO </li>
 [✅] Tendrás que usar React Router para crear una página o ruta específica para este juego en /hangman.<br>
 [✅] Para empezar, te recomendamos que busques una lista de N palabras (10 como mínimo) para jugar al ahorcado.<br>
 Ahora, esperaremos que la pantalla contenga:<br>
@@ -49,9 +49,9 @@ Ahora, esperaremos que la pantalla contenga:<br>
     Pista: _ _ _ _ _
 
 [✅] 2. Crea ahora un sistema de input de letras por parte de los usuarios, ya sea un conjunto de botones con el abecedario, un input, que cada letra de la pista sea un botón inicialmente... Te dejamos libertad completa, la idea es que el usuario podrá clickar o introducir letras en el juego para ser usadas en la solución <br>
-[] 3. Cada vez que un usuario introduzca una letra, comprobaremos si está en nuestra palabra. De ser así, la mostraremos donde corresponde, en caso contrario, mostraremos la letra en la pantalla bajo una lista de letras erróneas utilizadas y no permitiremos que nuestro usuario la introduzca de nuevo (puedes almacenarlas en un array de letras utilizadas para comprobar 😆).<br>
-[] 4. Daremos un número de intentos máximos al usuario, por lo que si el usuario falla el máximo de veces permitidas le informaremos de que la partida se ha terminado y tendrá que comenzar una nueva partida usando el botón de inicio.<br>
-[] 5. Si acierda todas las letras, ¡habrá ganado! Muestra de alguna forma las vidas que le quedan al usuario cuando intenta adivinar una palabra para que sepa como avanzar con el ejercicio 🔮<br>
+[✅] 3. Cada vez que un usuario introduzca una letra, comprobaremos si está en nuestra palabra. De ser así, la mostraremos donde corresponde, en caso contrario, mostraremos la letra en la pantalla bajo una lista de letras erróneas utilizadas y no permitiremos que nuestro usuario la introduzca de nuevo (puedes almacenarlas en un array de letras utilizadas para comprobar 😆).<br>
+[✅] 4. Daremos un número de intentos máximos al usuario, por lo que si el usuario falla el máximo de veces permitidas le informaremos de que la partida se ha terminado y tendrá que comenzar una nueva partida usando el botón de inicio.<br>
+[✅] 5. Si acierda todas las letras, ¡habrá ganado! Muestra de alguna forma las vidas que le quedan al usuario cuando intenta adivinar una palabra para que sepa como avanzar con el ejercicio 🔮<br>
 
 <li> [] SUDOKU </li>
 Tendrás que usar React Router para crear una página o ruta específica para este juego en /sudoku.<br>

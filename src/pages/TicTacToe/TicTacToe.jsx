@@ -32,7 +32,7 @@ function TicTacToe() {
   }
 
   // Función encargada de resetear las casillas de juego
-  function resetData() {
+  function newGame() {
     setData([null, null, null, null, null, null, null, null, null]);
     const game = document.querySelector('.gm-tictactoe-game');
     game.style.display = 'flex';
@@ -46,13 +46,13 @@ function TicTacToe() {
       const [index1, index2, index3] = combination;
       if (data[index1] === player && data[index2] === player && data[index3] === player) {
         setWinnerMessage(`¡El ganador es: ${player}!`);
-        resetData();
+        newGame();
       }
     });
     // Check empate
     if (data.every((cell) => cell !== null)) {
       setWinnerMessage('¡Empate!');
-      resetData();
+      newGame();
     }
   }
 
@@ -92,7 +92,7 @@ function TicTacToe() {
         </div>
         <h3>Turno: {player}</h3>
       </article>
-      <button type="button" onClick={() => resetData()}>
+      <button type="button" onClick={() => newGame()}>
         <p>Nueva partida</p>
       </button>
       <Link to="/">Volver</Link>

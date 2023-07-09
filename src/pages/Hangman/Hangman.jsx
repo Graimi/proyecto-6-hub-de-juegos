@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 
 function Hangman() {
   const [word, setWord] = useState(null);
-  const [lifes, setLifes] = useState(0);
+  const [lifes, setLifes] = useState('0');
   const [hint, setHint] = useState(null);
+  const [winnerMessage, setWinnerMessage] = useState(null);
 
   const words = [
     'ventana',
@@ -46,32 +47,32 @@ function Hangman() {
   ];
 
   const vocabulary = [
-    'a',
-    'b',
-    'c',
-    'd',
-    'e',
-    'f',
-    'g',
-    'h',
-    'i',
-    'j',
-    'k',
-    'l',
-    'm',
-    'n',
-    'o',
-    'p',
-    'q',
-    'r',
-    's',
-    't',
-    'u',
-    'v',
-    'w',
-    'x',
-    'y',
-    'z'
+    'A',
+    'B',
+    'C',
+    'D',
+    'E',
+    'F',
+    'G',
+    'H',
+    'I',
+    'J',
+    'K',
+    'L',
+    'M',
+    'N',
+    'O',
+    'P',
+    'Q',
+    'R',
+    'S',
+    'T',
+    'U',
+    'V',
+    'W',
+    'X',
+    'Y',
+    'Z'
   ];
 
   // Función encargada de seleccionar la palabra aleatoriamente
@@ -80,11 +81,11 @@ function Hangman() {
     // setWord(words[randomIndex].toUpperCase());
     // setHint('_ '.repeat(word.length));
     // setHint(word);
-    const selectedWord = words[randomIndex].toUpperCase();
-    const maskedWord = '_'.repeat(selectedWord.length);
+    const selectedWord = words[randomIndex].toUpperCase().split('');
+    const maskedWord = '❔'.repeat(selectedWord.length);
     setWord(maskedWord);
     setHint(maskedWord);
-    return words[randomIndex].toUpperCase();
+    return selectedWord;
   }
 
   function vocabularyDefault() {
@@ -113,13 +114,34 @@ function Hangman() {
 
   function vocabularyClick(letter) {
     console.log('Letter', letter);
+    console.log(word);
+
     if (word.includes(letter)) {
       const newHint = hint
         .split('')
         .map((char, index) => (word[index] === letter ? letter : char))
         .join('');
       setHint(newHint);
+    } else {
+      setLifes(lifes - 1);
     }
+  }
+
+  if (word && hint === word.join('')) {
+    setWinnerMessage('Enhorabuena, ¡te has librado!');
+    newGame();
+  }
+
+  if (lifes === 0) {
+    setWinnerMessage('Lo siento, has sido ahorcado');
+    newGame();
+  }
+
+  console.log(winnerMessage);
+
+  // Función encargada de volver a poner el mensaje del ganador vacío
+  function closeWinnerMessage() {
+    setWinnerMessage('');
   }
 
   return (
@@ -141,10 +163,10 @@ function Hangman() {
                   const letterButton = event.target;
                   letterButton.disabled = true;
                   letterButton.className = 'check';
-                  vocabularyClick(letter);
+                  vocabularyClick(letter.toUpperCase());
                 }}
               >
-                <p>{letter}</p>
+                {letter}
               </button>
             );
           })}
@@ -154,6 +176,15 @@ function Hangman() {
         Nueva partida
       </button>
       <Link to="/">Volver</Link>
+      {/* Lanzamos el mensaje cuando haya ganador */}
+      {winnerMessage && (
+        <div className="gm-hangman-winner">
+          <p>{winnerMessage}</p>
+          <button type="button" onClick={closeWinnerMessage}>
+            Cerrar
+          </button>
+        </div>
+      )}
     </div>
   );
 }
