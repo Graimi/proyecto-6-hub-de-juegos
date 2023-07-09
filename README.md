@@ -75,8 +75,8 @@ Ahora, esperaremos que la pantalla contenga:<br>
     // Comprobamos si solved es truthy, y sudokuBoard está correctamente solucionado
     const solved = sudoku.solvepuzzle(sudokuBoard);
 
-[] 6. En el momento en que el usuario haya completado la última celda disponible, permitiremos que esté disponible un botón para validar su sudoku contra la solución.<br>
-[] 7. Si la solución no es correcta, le daremos a nuestros usuarios las siguientes posibilidades:<br>
+[✅] 6. En el momento en que el usuario haya completado la última celda disponible, permitiremos que esté disponible un botón para validar su sudoku contra la solución.<br>
+[✅] 7. Si la solución no es correcta, le daremos a nuestros usuarios las siguientes posibilidades:<br>
 
     - Ver la solución y acabar la partida.
     - Seguir intentándolo y comprobar más tarde.
