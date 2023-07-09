@@ -43,7 +43,7 @@ Este proyecto puede llevarse al alcance que cada cual estime posible dentro de l
 [✅] Tendrás que usar React Router para crear una página o ruta específica para este juego en /hangman.<br>
 [✅] Para empezar, te recomendamos que busques una lista de N palabras (10 como mínimo) para jugar al ahorcado.<br>
 Ahora, esperaremos que la pantalla contenga:<br>
-[] 1. Crea un botón de empezar partida que al ser clickado recoja una palabra aleatoria del array de palabras y genere la pista inicial:<br>
+[✅] 1. Crea un botón de empezar partida que al ser clickado recoja una palabra aleatoria del array de palabras y genere la pista inicial:<br>
     
     Palabra: 'Coche'
     Pista: _ _ _ _ _

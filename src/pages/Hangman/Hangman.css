@@ -1,3 +1,17 @@
+.gm-hangman {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 10px; */
+  }
+
+  .gm-hangman-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
 .check {
     background-color: pink;
 }

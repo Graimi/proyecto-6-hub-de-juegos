@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Hangman.css';
 import { Link } from 'react-router-dom';
 
 function Hangman() {
   const [word, setWord] = useState(null);
   const [lifes, setLifes] = useState(0);
+  const [hint, setHint] = useState(null);
 
   const words = [
     'ventana',
@@ -76,6 +77,13 @@ function Hangman() {
   // Función encargada de seleccionar la palabra aleatoriamente
   function getRandomWord() {
     const randomIndex = Math.floor(Math.random() * words.length);
+    // setWord(words[randomIndex].toUpperCase());
+    // setHint('_ '.repeat(word.length));
+    // setHint(word);
+    const selectedWord = words[randomIndex].toUpperCase();
+    const maskedWord = '_'.repeat(selectedWord.length);
+    setWord(maskedWord);
+    setHint(maskedWord);
     return words[randomIndex].toUpperCase();
   }
 
@@ -89,17 +97,29 @@ function Hangman() {
   }
 
   // Función encargada de resetear el juego
-  function resetData() {
-    setWord(null);
+  function newGame() {
+    // setWord(null);
     // const board = document.querySelector('.none');
     // board.style.display = 'flex';
     setWord(getRandomWord());
+    // getRandomWord();
     setLifes(5);
     vocabularyDefault();
   }
 
+  // useEffect(() => {
+  //   setHint(word);
+  // }, [word]);
+
   function vocabularyClick(letter) {
     console.log('Letter', letter);
+    if (word.includes(letter)) {
+      const newHint = hint
+        .split('')
+        .map((char, index) => (word[index] === letter ? letter : char))
+        .join('');
+      setHint(newHint);
+    }
   }
 
   return (
@@ -109,7 +129,7 @@ function Hangman() {
         <h3>Vidas restantes: {lifes}</h3>
         <h3>Estado de vida: {lifeImg[lifes].img}</h3>
         <h3>{word}</h3>
-        <h3>Pista: </h3>
+        <h3>Pista: {hint}</h3>
         <article className="gm-hangman-vocabulary">
           {vocabulary.map((letter) => {
             return (
@@ -124,14 +144,13 @@ function Hangman() {
                   vocabularyClick(letter);
                 }}
               >
-                <p>
-                {letter}</p>
+                <p>{letter}</p>
               </button>
             );
           })}
         </article>
       </article>
-      <button type="button" onClick={() => resetData()}>
+      <button type="button" onClick={() => newGame()}>
         Nueva partida
       </button>
       <Link to="/">Volver</Link>
