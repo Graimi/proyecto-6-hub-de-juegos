@@ -54,8 +54,8 @@ Ahora, esperaremos que la pantalla contenga:<br>
 [✅] 5. Si acierda todas las letras, ¡habrá ganado! Muestra de alguna forma las vidas que le quedan al usuario cuando intenta adivinar una palabra para que sepa como avanzar con el ejercicio 🔮<br>
 
 <li> [] SUDOKU </li>
-Tendrás que usar React Router para crear una página o ruta específica para este juego en /sudoku.<br>
-[] 1. Como imaginarás, crear y validar un sudoku es algo bastante complicado que lleva tiempo, pero vamos a echarte una mano en la parte que no está tan relacionada con React y te vamos a recomendar el uso de una librería que por nuestra experiencia, funciona bastante bien: https://www.npmjs.com/package/sudoku (siéntente libre de usar alguna otra alternativa si lo deseas).<br>
+[✅] Tendrás que usar React Router para crear una página o ruta específica para este juego en /sudoku.<br>
+[✅] 1. Como imaginarás, crear y validar un sudoku es algo bastante complicado que lleva tiempo, pero vamos a echarte una mano en la parte que no está tan relacionada con React y te vamos a recomendar el uso de una librería que por nuestra experiencia, funciona bastante bien: https://www.npmjs.com/package/sudoku (siéntente libre de usar alguna otra alternativa si lo deseas).<br>
 
     npm i sudoku
 

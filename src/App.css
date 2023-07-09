@@ -1,12 +1,4 @@
 .app {
-  /* background-color: var(--gm-color-blue); */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100vh;
-  gap: var(--gm-gap-container);
-  overflow: auto;
-  /* margin: 50%; */
 }

@@ -1,0 +1,51 @@
+.gm-sudoku-board {
+  /* width: 100px; */
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  text-align: center;
+  border: 5px solid #af2727;;
+}
+
+.sudoku-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid #000;
+}
+
+/* Con las siguientes asignaciones conseguimos que se marquen los bordes cada 3x3 casillas */
+.sudoku-cell:nth-child(3n) {
+  border-right: 5px solid #913b3b;
+}
+
+.sudoku-cell:nth-child(1n + 19) {
+  border-bottom: 5px solid #af2727;
+}
+
+.sudoku-cell:nth-child(1n + 28) {
+  border-bottom: 1px solid #000;
+}
+
+.sudoku-cell:nth-child(1n + 46) {
+  border-bottom: 5px solid #af2727;
+}
+
+.sudoku-cell:nth-child(1n + 55) {
+  border-bottom: 1px solid #000;
+}
+
+/* number ? (
+    <p className="cell">{number}</p>
+  ) : (
+    <p>
+      <input
+        // type="number"
+        // name="cell"
+        id={`gm-sudoku-cell-${index}`}
+        className="gm-sudoku-cell"
+      />
+    </p>
+  )input:nth-child(3n) {
+    border-right: 2px solid black; */

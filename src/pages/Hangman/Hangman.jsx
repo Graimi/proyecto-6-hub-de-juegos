@@ -179,6 +179,7 @@ function Hangman() {
       {/* Lanzamos el mensaje cuando haya ganador */}
       {winnerMessage && (
         <div className="gm-hangman-winner">
+          {lifeImg[lifes].img}
           <p>{winnerMessage}</p>
           <button type="button" onClick={closeWinnerMessage}>
             Cerrar

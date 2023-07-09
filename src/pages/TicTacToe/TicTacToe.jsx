@@ -72,8 +72,8 @@ function TicTacToe() {
               // eslint-disable-next-line jsx-a11y/control-has-associated-label
               <button
                 type="button"
-                id="gm-tictactoe-cell"
-                className={`cell-${index}`}
+                id={`gm-tictactoe-cell-${index}`}
+                className="gm-tictactoe-cell"
                 onClick={() => {
                   if (data[index] === null) {
                     // Lanzamos la lógica para meter el jugador en la casilla y cambiar entre ellos

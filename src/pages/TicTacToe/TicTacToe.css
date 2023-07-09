@@ -15,7 +15,7 @@
   grid-gap: 10px;
 }
 
-#gm-tictactoe-cell {
+.gm-tictactoe-cell {
   width: 70px;
   height: 70px;
   background-color: lightgray;
