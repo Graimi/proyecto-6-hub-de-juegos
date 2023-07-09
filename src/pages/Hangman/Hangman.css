@@ -1,0 +1,16 @@
+.check {
+    background-color: pink;
+}
+
+.gm-hangman-vocabulary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gm-hangman-letter {
+    background-color: gray;
+    border: none;
+    color: black;
+}

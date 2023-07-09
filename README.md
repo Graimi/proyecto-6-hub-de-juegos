@@ -48,7 +48,7 @@ Ahora, esperaremos que la pantalla contenga:<br>
     Palabra: 'Coche'
     Pista: _ _ _ _ _
 
-[] 2. Crea ahora un sistema de input de letras por parte de los usuarios, ya sea un conjunto de botones con el abecedario, un input, que cada letra de la pista sea un botón inicialmente... Te dejamos libertad completa, la idea es que el usuario podrá clickar o introducir letras en el juego para ser usadas en la solución <br>
+[✅] 2. Crea ahora un sistema de input de letras por parte de los usuarios, ya sea un conjunto de botones con el abecedario, un input, que cada letra de la pista sea un botón inicialmente... Te dejamos libertad completa, la idea es que el usuario podrá clickar o introducir letras en el juego para ser usadas en la solución <br>
 [] 3. Cada vez que un usuario introduzca una letra, comprobaremos si está en nuestra palabra. De ser así, la mostraremos donde corresponde, en caso contrario, mostraremos la letra en la pantalla bajo una lista de letras erróneas utilizadas y no permitiremos que nuestro usuario la introduzca de nuevo (puedes almacenarlas en un array de letras utilizadas para comprobar 😆).<br>
 [] 4. Daremos un número de intentos máximos al usuario, por lo que si el usuario falla el máximo de veces permitidas le informaremos de que la partida se ha terminado y tendrá que comenzar una nueva partida usando el botón de inicio.<br>
 [] 5. Si acierda todas las letras, ¡habrá ganado! Muestra de alguna forma las vidas que le quedan al usuario cuando intenta adivinar una palabra para que sepa como avanzar con el ejercicio 🔮<br>

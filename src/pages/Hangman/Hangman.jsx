@@ -35,7 +35,42 @@ function Hangman() {
     },
     {
       img: '3'
+    },
+    {
+      img: '4'
+    },
+    {
+      img: '5'
     }
+  ];
+
+  const vocabulary = [
+    'a',
+    'b',
+    'c',
+    'd',
+    'e',
+    'f',
+    'g',
+    'h',
+    'i',
+    'j',
+    'k',
+    'l',
+    'm',
+    'n',
+    'o',
+    'p',
+    'q',
+    'r',
+    's',
+    't',
+    'u',
+    'v',
+    'w',
+    'x',
+    'y',
+    'z'
   ];
 
   // Función encargada de seleccionar la palabra aleatoriamente
@@ -44,13 +79,27 @@ function Hangman() {
     return words[randomIndex].toUpperCase();
   }
 
+  function vocabularyDefault() {
+    const vocabularyButtons = document.querySelectorAll('.gm-hangman-vocabulary button');
+    vocabularyButtons.forEach((button) => {
+      button.classList.remove('check');
+      button.classList.add('gm-hangman-letter');
+      button.removeAttribute('disabled');
+    });
+  }
+
   // Función encargada de resetear el juego
   function resetData() {
     setWord(null);
     // const board = document.querySelector('.none');
     // board.style.display = 'flex';
     setWord(getRandomWord());
-    setLifes(3);
+    setLifes(5);
+    vocabularyDefault();
+  }
+
+  function vocabularyClick(letter) {
+    console.log('Letter', letter);
   }
 
   return (
@@ -61,7 +110,26 @@ function Hangman() {
         <h3>Estado de vida: {lifeImg[lifes].img}</h3>
         <h3>{word}</h3>
         <h3>Pista: </h3>
-        <p>Input de abecedario</p>
+        <article className="gm-hangman-vocabulary">
+          {vocabulary.map((letter) => {
+            return (
+              <button
+                type="button"
+                id={`gm-hangman-letter-${letter}`}
+                className="gm-hangman-letter"
+                onClick={(event) => {
+                  const letterButton = event.target;
+                  letterButton.disabled = true;
+                  letterButton.className = 'check';
+                  vocabularyClick(letter);
+                }}
+              >
+                <p>
+                {letter}</p>
+              </button>
+            );
+          })}
+        </article>
       </article>
       <button type="button" onClick={() => resetData()}>
         Nueva partida

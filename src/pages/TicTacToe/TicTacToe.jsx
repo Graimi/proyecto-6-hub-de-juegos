@@ -34,8 +34,8 @@ function TicTacToe() {
   // Función encargada de resetear las casillas de juego
   function resetData() {
     setData([null, null, null, null, null, null, null, null, null]);
-    const board = document.querySelector('.gm-tictactoe-none');
-    board.style.display = 'flex';
+    const game = document.querySelector('.gm-tictactoe-game');
+    game.style.display = 'flex';
     setPlayer(getRandomPlayer());
   }
 
