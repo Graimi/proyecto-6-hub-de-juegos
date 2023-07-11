@@ -53,13 +53,13 @@ Ahora, esperaremos que la pantalla contenga:<br>
 [✅] 4. Daremos un número de intentos máximos al usuario, por lo que si el usuario falla el máximo de veces permitidas le informaremos de que la partida se ha terminado y tendrá que comenzar una nueva partida usando el botón de inicio.<br>
 [✅] 5. Si acierda todas las letras, ¡habrá ganado! Muestra de alguna forma las vidas que le quedan al usuario cuando intenta adivinar una palabra para que sepa como avanzar con el ejercicio 🔮<br>
 
-<li> [] SUDOKU </li>
+<li> [✅] SUDOKU </li>
 [✅] Tendrás que usar React Router para crear una página o ruta específica para este juego en /sudoku.<br>
 [✅] 1. Como imaginarás, crear y validar un sudoku es algo bastante complicado que lleva tiempo, pero vamos a echarte una mano en la parte que no está tan relacionada con React y te vamos a recomendar el uso de una librería que por nuestra experiencia, funciona bastante bien: https://www.npmjs.com/package/sudoku (siéntente libre de usar alguna otra alternativa si lo deseas).<br>
 
     npm i sudoku
 
-[] 2. Esta librería genera un array de un solo nivel con `81` celdas, es decir, `9x9` elementos que podremos renderizar sin problemas 🎉 Algunos números vienen ya en el array y tendremos que sustituir los valores `null` por nuevos números adecuados según el usuario lo complete en la interfaz.<br>
+[✅] 2. Esta librería genera un array de un solo nivel con `81` celdas, es decir, `9x9` elementos que podremos renderizar sin problemas 🎉 Algunos números vienen ya en el array y tendremos que sustituir los valores `null` por nuevos números adecuados según el usuario lo complete en la interfaz.<br>
 [✅] 3. Para generar el tablero inicial que debemos renderizar, hay que usar un estado, no te preocupes por ello que ya te dejamos esta pista también, queremos que te centres en React principalmente:<br>
 
     const [sudokuBoard, setSudokuBoard] = useState(null);
@@ -85,14 +85,14 @@ Ahora, esperaremos que la pantalla contenga:<br>
 
 <li> [] CRITERIOS DE ACEPTACIÓN </li>
 [] 1. Tu proyecto debe estar desplegado en **Netlify** y superar los siguientes criterios de aceptación para que el equipo de Rock{theCode} te certifique como Frontend Developer. <br>
-[] 2. Veré una Home en la que se muestran los tres juegos enumerados.<br>
+[✅] 2. Veré una Home en la que se muestran los tres juegos enumerados.<br>
     - [✅] La Home tendrá un Link apuntando a cada ruta juego para navegar en la aplicación.<br>
 [] 3.En la ruta `/tictactoe` encontraré un Tres en Raya que será jugable.<br>
-    - [] Podré empezar nueva partida pulsando un botón.<br>
-    - [] El jugador que comienza se seleccionará de forma alreatoria (random).<br>
-    - [] Cada jugador está representado por un símbolo propio (X o O sirven).<br>
-    - [] Si un jugador gana el tres en raya, se lanzará un mensaje en pantalla validando su victoria.<br>
-    - [] Si los jugadores empatan, se lanzará un mensaje en pantalla anunciando el empate.<br>
+    - [✅] Podré empezar nueva partida pulsando un botón.<br>
+    - [✅] El jugador que comienza se seleccionará de forma alreatoria (random).<br>
+    - [✅] Cada jugador está representado por un símbolo propio (X o O sirven).<br>
+    - [✅] Si un jugador gana el tres en raya, se lanzará un mensaje en pantalla validando su victoria.<br>
+    - [✅] Si los jugadores empatan, se lanzará un mensaje en pantalla anunciando el empate.<br>
     - [] Cuando una partida acabe, el botón de empezar nueva partida volverá a estar disponible.<br>
 [] 4.En la ruta `/hangman` encontraré el Juego del Ahorcado.<br>
     - [] Podré empezar una partida pulsando un botón.<br>

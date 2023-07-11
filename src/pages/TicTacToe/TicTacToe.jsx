@@ -46,19 +46,22 @@ function TicTacToe() {
       const [index1, index2, index3] = combination;
       if (data[index1] === player && data[index2] === player && data[index3] === player) {
         setWinnerMessage(`¡El ganador es: ${player}!`);
-        newGame();
+        const game = document.querySelector('.gm-tictactoe-game');
+        game.style.display = 'none';
       }
     });
     // Check empate
     if (data.every((cell) => cell !== null)) {
       setWinnerMessage('¡Empate!');
-      newGame();
+      const game = document.querySelector('.gm-tictactoe-game');
+      game.style.display = 'none';
     }
   }
 
   // Función encargada de volver a poner el mensaje del ganador vacío
   function closeWinnerMessage() {
     setWinnerMessage('');
+    newGame();
   }
 
   // Template del juego en cuestión

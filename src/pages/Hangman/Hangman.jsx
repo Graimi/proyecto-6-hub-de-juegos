@@ -100,8 +100,8 @@ function Hangman() {
   // Función encargada de resetear el juego
   function newGame() {
     // setWord(null);
-    // const board = document.querySelector('.none');
-    // board.style.display = 'flex';
+    const game = document.querySelector('.gm-hangman-game');
+    game.style.display = 'flex';
     setWord(getRandomWord());
     // getRandomWord();
     setLifes(5);
@@ -109,9 +109,6 @@ function Hangman() {
   }
 
   function vocabularyClick(letter) {
-    console.log('Letter', letter);
-    console.log(word);
-
     if (word.includes(letter)) {
       const newHint = hint
         .split('')
@@ -123,30 +120,38 @@ function Hangman() {
     }
   }
 
-  if (word && hint === word.join('')) {
-    setWinnerMessage('Enhorabuena, ¡te has librado!');
-    newGame();
-  }
+  useEffect(() => {
+    if (word && hint === word.join('')) {
+      setWinnerMessage('Enhorabuena, ¡te has librado!');
+      // newGame();
+      const game = document.querySelector('.gm-hangman-game');
+      game.style.display = 'none';
+    }
+  }, [hint]);
 
-  if (lifes === 0) {
-    setWinnerMessage('Lo siento, has sido ahorcado');
-    newGame();
-  }
+  useEffect(() => {
+    if (lifes === 0) {
+      setWinnerMessage('Lo siento, has sido ahorcado');
+      // newGame();
+      const game = document.querySelector('.gm-hangman-game');
+      game.style.display = 'none';
+    }
+  }, [lifes]);
 
   console.log(winnerMessage);
 
   // Función encargada de volver a poner el mensaje del ganador vacío
   function closeWinnerMessage() {
     setWinnerMessage('');
+    newGame();
   }
 
   return (
     <div className="gm-hangman">
+      <h1>Hangman</h1>
       <article className="gm-hangman-game">
-        <h1>Hangman</h1>
         <h3>Vidas restantes: {lifes}</h3>
         <h3>Estado de vida: {lifeImg[lifes].img}</h3>
-        <h3>{word}</h3>
         <h3>Pista: {hint}</h3>
         <article className="gm-hangman-vocabulary">
           {vocabulary.map((letter) => {
@@ -175,7 +180,6 @@ function Hangman() {
       {/* Lanzamos el mensaje cuando haya ganador */}
       {winnerMessage && (
         <div className="gm-hangman-winner">
-          {lifeImg[lifes].img}
           <p>{winnerMessage}</p>
           <button type="button" onClick={closeWinnerMessage}>
             Cerrar

@@ -6,7 +6,7 @@
   }
 
   .gm-hangman-game {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     gap: 10px;
