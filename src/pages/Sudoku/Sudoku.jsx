@@ -8,6 +8,7 @@ function Sudoku() {
   const [newSudokuBoard, setNewSudokuBoard] = useState(null);
   const [winnerMessage, setWinnerMessage] = useState('');
   const [result, setResult] = useState('');
+  const [completed, setCompleted] = useState(false);
 
   useEffect(() => {
     const newSudoku = makepuzzle();
@@ -16,9 +17,13 @@ function Sudoku() {
   }, []);
 
   function newGame() {
+    const game = document.querySelector('.gm-sudoku-game');
+    game.style.display = 'flex';
     const newSudoku = makepuzzle();
     setSudokuBoard(newSudoku);
     setNewSudokuBoard(newSudoku);
+    setCompleted(false);
+    setResult(false);
   }
 
   function handleInputChange(event, index) {
@@ -33,6 +38,10 @@ function Sudoku() {
 
     newSudoku[index] = inputValue;
     setNewSudokuBoard(newSudoku);
+
+    // Comprobamos si el tablero está lleno o no
+    // eslint-disable-next-line no-unused-expressions
+    !newSudoku.includes(null) ? setCompleted(true) : setCompleted(false);
   }
 
   function renderCell(number, index) {
@@ -55,6 +64,9 @@ function Sudoku() {
   }
 
   function checkSudoku() {
+    const game = document.querySelector('.gm-sudoku-game');
+    game.style.display = 'none';
+    console.log('ei');
     const solved = solvepuzzle(sudokuBoard);
     if (solved.every((value, index) => value === newSudokuBoard[index])) {
       setWinnerMessage('Resuelto, enhorabuena');
@@ -67,24 +79,39 @@ function Sudoku() {
 
   function closeWinnerMessage() {
     setWinnerMessage('');
+    if (result) {
+      newGame();
+    } else {
+      const game = document.querySelector('.gm-sudoku-game');
+      game.style.display = 'flex';
+    }
   }
 
   function resolveSudoku() {
     setNewSudokuBoard(solvepuzzle(sudokuBoard));
     closeWinnerMessage();
+    setCompleted(false);
   }
 
   return (
     sudokuBoard && (
       <div className="gm-sudoku">
+        <h1>Sudoku</h1>
         <article className="gm-sudoku-game">
-          <h1>Sudoku</h1>
           <div id="gm-sudoku-board" className="gm-sudoku-board">
             {newSudokuBoard.map((number, index) => {
               return renderCell(number, index);
             })}
           </div>
-          <button type="button" onClick={() => checkSudoku()}>
+          <button type="button" onClick={resolveSudoku}>
+            <p>Ver la solución</p>
+          </button>
+          <button
+            type="button"
+            className="gm-sudoku-button-check"
+            onClick={() => checkSudoku()}
+            disabled={!completed}
+          >
             <p>Comprobar</p>
           </button>
         </article>

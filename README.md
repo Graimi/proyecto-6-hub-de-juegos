@@ -83,35 +83,35 @@ Ahora, esperaremos que la pantalla contenga:<br>
 
 [✅] 8. Por último, añade un botón para empezar una nueva partida siempre que queramos, pisando los datos anteriores de nuestro estado.<br>
 
-<li> [] CRITERIOS DE ACEPTACIÓN </li>
-[] 1. Tu proyecto debe estar desplegado en **Netlify** y superar los siguientes criterios de aceptación para que el equipo de Rock{theCode} te certifique como Frontend Developer. <br>
+<li> [✅] CRITERIOS DE ACEPTACIÓN </li>
+[✅] 1. Tu proyecto debe estar desplegado en **Netlify** y superar los siguientes criterios de aceptación para que el equipo de Rock{theCode} te certifique como Frontend Developer. <br>
 [✅] 2. Veré una Home en la que se muestran los tres juegos enumerados.<br>
     - [✅] La Home tendrá un Link apuntando a cada ruta juego para navegar en la aplicación.<br>
-[] 3.En la ruta `/tictactoe` encontraré un Tres en Raya que será jugable.<br>
+[✅] 3.En la ruta `/tictactoe` encontraré un Tres en Raya que será jugable.<br>
     - [✅] Podré empezar nueva partida pulsando un botón.<br>
     - [✅] El jugador que comienza se seleccionará de forma alreatoria (random).<br>
     - [✅] Cada jugador está representado por un símbolo propio (X o O sirven).<br>
     - [✅] Si un jugador gana el tres en raya, se lanzará un mensaje en pantalla validando su victoria.<br>
     - [✅] Si los jugadores empatan, se lanzará un mensaje en pantalla anunciando el empate.<br>
-    - [] Cuando una partida acabe, el botón de empezar nueva partida volverá a estar disponible.<br>
-[] 4.En la ruta `/hangman` encontraré el Juego del Ahorcado.<br>
-    - [] Podré empezar una partida pulsando un botón.<br>
-        -- []  Esto mostrará en pantalla una palabra incompleta (todas las letras son guiones bajos) usando una palabra aleatoria como referencia.<br>
-    - [] Tendré disponible un `input` o un botón que represente cada letra del abecedario, de forma que pueda introducir nuevas letras.<br>
-    - [] Cada vez que me equivoque con una letra, esta aparecerá listada como error en pantalla.<br>
-    - [] Si acierto con una letra, los espacios de la palabra incompleta se llenarán con esa letra donde corresponda.<br>
-    - [] Tendré un límite máximo de intentos para probar, si me equivoco acabará la partida y se anunciará con un mensaje.<br>
-        -- [] Esto mostrará la palabra a adivinar completa, para enseñarme cual era.<br>
-        -- [] Las vistas deben ser visibles en cualquier momento y reducirse en 1 a cada fallo.<br>
-    - [] Cuando acabo una partida, podré empezar una nueva con otra palabra aleatoria.<br>
-- [] 5.En al ruta `/sudoku` encontraré el juego Sudoku.<br>
-    -- [] El juego usará la librería `sudoku` que hemos recomendado, o una alternativa similar en caso de que lo prefieras.<br>
-    -- [] Pulsando un botón para empezar partida, se generará un nuevo tablero de Sudoku con números incompletos.<br>
-    -- [] Cada celda de número incompleto debe ser un elemento que puedo editar (un botón para pulsar y seleccionar después un número, un input para introducir un número…).<br>
-    -- [] Debo poder ver un botón para completar el sudoku si me rindo, que muestre el tablero completo con la solución final.<br>
-    -- [] Debo poder ver un botón (disabled y no clickable por defecto) que se activará cuando tenga todos los números del sudoku llenos. Este botón me permitirá comprobar mi solución.<br>
-        --- [] Mostrará un mensaje en pantalla si he acertado el sudoku, dejándome empezar una nueva partida tras mi victoria.<br>
-        --- [] Mostrará un mensaje en pantalla si no he acertado.<br>
+    - [✅] Cuando una partida acabe, el botón de empezar nueva partida volverá a estar disponible.<br>
+[✅] 4.En la ruta `/hangman` encontraré el Juego del Ahorcado.<br>
+    - [✅] Podré empezar una partida pulsando un botón.<br>
+        -- [✅]  Esto mostrará en pantalla una palabra incompleta (todas las letras son guiones bajos) usando una palabra aleatoria como referencia.<br>
+    - [✅] Tendré disponible un `input` o un botón que represente cada letra del abecedario, de forma que pueda introducir nuevas letras.<br>
+    - [✅] Cada vez que me equivoque con una letra, esta aparecerá listada como error en pantalla.<br>
+    - [✅] Si acierto con una letra, los espacios de la palabra incompleta se llenarán con esa letra donde corresponda.<br>
+    - [✅] Tendré un límite máximo de intentos para probar, si me equivoco acabará la partida y se anunciará con un mensaje.<br>
+        -- [✅] Esto mostrará la palabra a adivinar completa, para enseñarme cual era.<br>
+        -- [✅] Las vidas deben ser visibles en cualquier momento y reducirse en 1 a cada fallo.<br>
+    - [✅] Cuando acabo una partida, podré empezar una nueva con otra palabra aleatoria.<br>
+- [✅] 5.En al ruta `/sudoku` encontraré el juego Sudoku.<br>
+    -- [✅] El juego usará la librería `sudoku` que hemos recomendado, o una alternativa similar en caso de que lo prefieras.<br>
+    -- [✅] Pulsando un botón para empezar partida, se generará un nuevo tablero de Sudoku con números incompletos.<br>
+    -- [✅] Cada celda de número incompleto debe ser un elemento que puedo editar (un botón para pulsar y seleccionar después un número, un input para introducir un número…).<br>
+    -- [✅] Debo poder ver un botón para completar el sudoku si me rindo, que muestre el tablero completo con la solución final.<br>
+    -- [✅] Debo poder ver un botón (disabled y no clickable por defecto) que se activará cuando tenga todos los números del sudoku llenos. Este botón me permitirá comprobar mi solución.<br>
+        --- [✅] Mostrará un mensaje en pantalla si he acertado el sudoku, dejándome empezar una nueva partida tras mi victoria.<br>
+        --- [✅] Mostrará un mensaje en pantalla si no he acertado.<br>
         </ul>
 <br>
 
@@ -130,7 +130,6 @@ Ahora, esperaremos que la pantalla contenga:<br>
 <li> [] Tres en raya </li>
 [] Emojis en base a la temática <br>
 [] Si western pues fichas casino <br>
-Tres en raya
 
 <li> [] Ahorcado </li>
 [] Crear un state que almacene el número de vidas <br>

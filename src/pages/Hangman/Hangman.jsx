@@ -78,9 +78,6 @@ function Hangman() {
   // Función encargada de seleccionar la palabra aleatoriamente
   function getRandomWord() {
     const randomIndex = Math.floor(Math.random() * words.length);
-    // setWord(words[randomIndex].toUpperCase());
-    // setHint('_ '.repeat(word.length));
-    // setHint(word);
     const selectedWord = words[randomIndex].toUpperCase().split('');
     const maskedWord = '❔'.repeat(selectedWord.length);
     setWord(maskedWord);
@@ -99,24 +96,27 @@ function Hangman() {
 
   // Función encargada de resetear el juego
   function newGame() {
-    // setWord(null);
     const game = document.querySelector('.gm-hangman-game');
     game.style.display = 'flex';
     setWord(getRandomWord());
-    // getRandomWord();
     setLifes(5);
     vocabularyDefault();
   }
 
-  function vocabularyClick(letter) {
-    if (word.includes(letter)) {
+  function vocabularyClick(letter, event) {
+    const letterButton = event.target;
+    letterButton.disabled = true;
+
+    if (word.includes(letter.toUpperCase())) {
       const newHint = hint
         .split('')
         .map((char, index) => (word[index] === letter ? letter : char))
         .join('');
       setHint(newHint);
+      letterButton.className = 'check-good';
     } else {
       setLifes(lifes - 1);
+      letterButton.className = 'check-bad';
     }
   }
 
@@ -157,10 +157,7 @@ function Hangman() {
                 id={`gm-hangman-letter-${letter}`}
                 className="gm-hangman-letter"
                 onClick={(event) => {
-                  const letterButton = event.target;
-                  letterButton.disabled = true;
-                  letterButton.className = 'check';
-                  vocabularyClick(letter.toUpperCase());
+                  vocabularyClick(letter, event);
                 }}
               >
                 {letter}
@@ -177,6 +174,8 @@ function Hangman() {
       {winnerMessage && (
         <div className="gm-hangman-winner">
           <p>{winnerMessage}</p>
+          <p>La palabra era</p>
+          <h3>{word}</h3>
           <button type="button" onClick={closeWinnerMessage}>
             Cerrar
           </button>
