@@ -58,7 +58,7 @@ function TicTacToe() {
     }
   }
 
-  // Función encargada de volver a poner el mensaje del ganador vacío
+  // Función encargada de cerrar el mensaje que aparece cuando finaliza el juego
   function closeWinnerMessage() {
     setWinnerMessage('');
     newGame();
@@ -95,7 +95,7 @@ function TicTacToe() {
         </div>
         <h3>Turno: {player}</h3>
       </article>
-      <button type="button" onClick={() => newGame()}>
+      <button type="button" className="gm-tictactoe-button-newGame" onClick={() => newGame()}>
         <p>Nueva partida</p>
       </button>
       <Link to="/">Volver</Link>
@@ -103,7 +103,11 @@ function TicTacToe() {
       {winnerMessage && (
         <div className="gm-tictactoe-winner">
           <p>{winnerMessage}</p>
-          <button type="button" onClick={closeWinnerMessage}>
+          <button
+            type="button"
+            className="gm-tictactoe-button-closeWindow"
+            onClick={closeWinnerMessage}
+          >
             Cerrar
           </button>
         </div>

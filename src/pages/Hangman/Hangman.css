@@ -12,14 +12,6 @@
   gap: 10px;
 }
 
-.check-good {
-  background-color: green;
-}
-
-.check-bad {
-  background-color: pink;
-}
-
 .gm-hangman-vocabulary {
   display: flex;
   flex-wrap: wrap;
@@ -31,6 +23,16 @@
   background-color: gray;
   border: none;
   color: black;
+}
+
+/* .check  */
+.good {
+  background-color: green;
+}
+
+/* .check */
+.bad {
+  background-color: pink;
 }
 
 .gm-hangman-winner {
