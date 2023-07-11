@@ -13,10 +13,22 @@
 }
 
 .sudoku-cell {
-  display: flex;
+  /* display: flex; */
   align-items: center;
+  text-align: center;
   justify-content: center;
   background-color: white;
+  border: 1px solid #000;
+  /* border: none; */
+}
+
+.sudoku-cell:disabled {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(192, 192, 192);
   border: 1px solid #000;
   /* border: none; */
 }
@@ -55,3 +67,4 @@
     </p>
   )input:nth-child(3n) {
     border-right: 2px solid black; */
+
