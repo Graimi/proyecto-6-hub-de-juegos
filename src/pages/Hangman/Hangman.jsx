@@ -123,7 +123,6 @@ function Hangman() {
   useEffect(() => {
     if (word && hint === word.join('')) {
       setWinnerMessage('Enhorabuena, ¡te has librado!');
-      // newGame();
       const game = document.querySelector('.gm-hangman-game');
       game.style.display = 'none';
     }
@@ -132,13 +131,10 @@ function Hangman() {
   useEffect(() => {
     if (lifes === 0) {
       setWinnerMessage('Lo siento, has sido ahorcado');
-      // newGame();
       const game = document.querySelector('.gm-hangman-game');
       game.style.display = 'none';
     }
   }, [lifes]);
-
-  console.log(winnerMessage);
 
   // Función encargada de volver a poner el mensaje del ganador vacío
   function closeWinnerMessage() {
@@ -148,7 +144,7 @@ function Hangman() {
 
   return (
     <div className="gm-hangman">
-      <h1>Hangman</h1>
+      <h1>El ahorcado</h1>
       <article className="gm-hangman-game">
         <h3>Vidas restantes: {lifes}</h3>
         <h3>Estado de vida: {lifeImg[lifes].img}</h3>
