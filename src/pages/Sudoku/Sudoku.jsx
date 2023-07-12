@@ -3,19 +3,23 @@ import './Sudoku.css';
 import { Link } from 'react-router-dom';
 import { makepuzzle, solvepuzzle } from 'sudoku';
 
+// Creamos la función para el juego Sudoku
 function Sudoku() {
+  // Creamos los estados para el juego
   const [sudokuBoard, setSudokuBoard] = useState('');
   const [newSudokuBoard, setNewSudokuBoard] = useState(null);
   const [winnerMessage, setWinnerMessage] = useState('');
   const [result, setResult] = useState('');
   const [completed, setCompleted] = useState(false);
 
+  // Creamos el siguiente effect para que se cargue todo al empezar el juego
   useEffect(() => {
     const newSudoku = makepuzzle();
     setSudokuBoard(newSudoku);
     setNewSudokuBoard(newSudoku);
   }, []);
 
+  // Función encargada de crear un nuevo tablero y restablecer todo cuando si inicie una nueva partida
   function newGame() {
     const game = document.querySelector('.gm-sudoku-game');
     game.style.display = 'flex';
@@ -26,12 +30,13 @@ function Sudoku() {
     setResult(false);
   }
 
+  // Función encargada de gestionar la entrada de datos en cada celda
   function handleInputChange(event, index) {
     const newSudoku = [...newSudokuBoard];
     const inputValue = event.target.value === '' ? null : Number(event.target.value);
 
-    // Validamos que el número ingresado esté entre 0 y 9
-    if (inputValue !== null && (inputValue < 0 || inputValue > 9)) {
+    // Validamos que el número ingresado esté entre 0 y 8
+    if (inputValue !== null && (inputValue < 0 || inputValue > 8)) {
       alert('El número tiene que estar entre 0 y 9');
       return;
     }
@@ -44,6 +49,7 @@ function Sudoku() {
     !newSudoku.includes(null) ? setCompleted(true) : setCompleted(false);
   }
 
+  // Función encargada de renderizar cada celda acorde al tablero
   function renderCell(number, index) {
     const originalNumber = number === sudokuBoard[index] && number !== null;
     const value = number === null ? '' : number;
@@ -57,12 +63,13 @@ function Sudoku() {
         value={value}
         disabled={originalNumber}
         min="0"
-        max="9"
+        max="8"
         onChange={(event) => handleInputChange(event, index)}
       />
     );
   }
 
+  // Función encargada de comprobar si el sudoku es correcto
   function checkSudoku() {
     const game = document.querySelector('.gm-sudoku-game');
     game.style.display = 'none';
@@ -77,6 +84,7 @@ function Sudoku() {
     }
   }
 
+  // Función que cierra el mensaje pop up y actua según el resultado
   function closeWinnerMessage() {
     setWinnerMessage('');
     if (result) {
@@ -87,12 +95,14 @@ function Sudoku() {
     }
   }
 
+  // Función que resuelve el sudoku
   function resolveSudoku() {
     setNewSudokuBoard(solvepuzzle(sudokuBoard));
     closeWinnerMessage();
     setCompleted(false);
   }
 
+  // Template del juego en cuestión
   return (
     sudokuBoard && (
       <div className="gm-sudoku">
@@ -110,6 +120,7 @@ function Sudoku() {
             type="button"
             className="gm-sudoku-button-check"
             onClick={() => checkSudoku()}
+            // Si no se han llenado todas las casillas se desactiva
             disabled={!completed}
           >
             <p>Comprobar</p>
@@ -119,6 +130,7 @@ function Sudoku() {
           <p>Nueva partida</p>
         </button>
         <Link to="/">Volver</Link>
+        {/* Lanzamos el mensaje cuando haya un resultado */}
         {winnerMessage && (
           <div className="gm-hangman-winner">
             <p>{winnerMessage}</p>

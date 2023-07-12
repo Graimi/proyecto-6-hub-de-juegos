@@ -187,7 +187,7 @@ function Hangman() {
         <p>Nueva partida</p>
       </button>
       <Link to="/">Volver</Link>
-      {/* Lanzamos el mensaje cuando haya ganador */}
+      {/* Lanzamos el mensaje cuando haya un resultado */}
       {winnerMessage && (
         <div className="gm-hangman-winner">
           <p>{winnerMessage}</p>
