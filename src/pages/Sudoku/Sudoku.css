@@ -21,11 +21,11 @@
   border: 5px solid #af2727;
 }
 
-.sudoku-cell-original {
+.gm-sudoku-cell-original {
   background-color: gray;
 }
 
-.sudoku-cell {
+.gm-sudoku-cell {
   /* display: flex; */
   align-items: center;
   text-align: center;
@@ -35,7 +35,7 @@
   /* border: none; */
 }
 
-.sudoku-cell:disabled {
+.gm-sudoku-cell:disabled {
   margin: 0;
   display: flex;
   align-items: center;
@@ -47,36 +47,22 @@
 }
 
 /* Con las siguientes asignaciones conseguimos que se marquen los bordes cada 3x3 casillas */
-.sudoku-cell:nth-child(3n) {
+.gm-sudoku-cell:nth-child(3n) {
   border-right: 5px solid #913b3b;
 }
 
-.sudoku-cell:nth-child(1n + 19) {
+.gm-sudoku-cell:nth-child(1n + 19) {
   border-bottom: 5px solid #af2727;
 }
 
-.sudoku-cell:nth-child(1n + 28) {
+.gm-sudoku-cell:nth-child(1n + 28) {
   border-bottom: 1px solid #000;
 }
 
-.sudoku-cell:nth-child(1n + 46) {
+.gm-sudoku-cell:nth-child(1n + 46) {
   border-bottom: 5px solid #af2727;
 }
 
-.sudoku-cell:nth-child(1n + 55) {
+.gm-sudoku-cell:nth-child(1n + 55) {
   border-bottom: 1px solid #000;
 }
-
-/* number ? (
-    <p className="cell">{number}</p>
-  ) : (
-    <p>
-      <input
-        // type="number"
-        // name="cell"
-        id={`gm-sudoku-cell-${index}`}
-        className="gm-sudoku-cell"
-      />
-    </p>
-  )input:nth-child(3n) {
-    border-right: 2px solid black; */

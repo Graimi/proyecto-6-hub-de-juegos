@@ -56,14 +56,14 @@ function Sudoku() {
 
     return (
       <input
-        key={index}
-        id={index}
         type="number"
-        className="sudoku-cell"
+        key={index}
+        id={`gm-sudoku-letter-${index}`}
+        className="gm-sudoku-cell"
         value={value}
-        disabled={originalNumber}
         min="0"
         max="8"
+        disabled={originalNumber}
         onChange={(event) => handleInputChange(event, index)}
       />
     );
@@ -113,8 +113,8 @@ function Sudoku() {
               return renderCell(number, index);
             })}
           </div>
-          <button type="button" onClick={resolveSudoku}>
-            <p>Ver la solución</p>
+          <button type="button" className="gm-sudoku-button-resolve" onClick={resolveSudoku}>
+            Ver la solución
           </button>
           <button
             type="button"
@@ -123,24 +123,28 @@ function Sudoku() {
             // Si no se han llenado todas las casillas se desactiva
             disabled={!completed}
           >
-            <p>Comprobar</p>
+            Comprobar
           </button>
         </article>
-        <button type="button" onClick={() => newGame()}>
-          <p>Nueva partida</p>
+        <button type="button" className="gm-sudoku-button-newGame" onClick={() => newGame()}>
+          Nueva partida
         </button>
         <Link to="/">Volver</Link>
         {/* Lanzamos el mensaje cuando haya un resultado */}
         {winnerMessage && (
-          <div className="gm-hangman-winner">
+          <div className="gm-sudoku-winner">
             <p>{winnerMessage}</p>
             {!result && (
-              <button type="button" onClick={resolveSudoku}>
-                <p>Ver la solución</p>
+              <button type="button" className="gm-sudoku-button-resolve" onClick={resolveSudoku}>
+                Ver la solución
               </button>
             )}
-            <button type="button" onClick={closeWinnerMessage}>
-              <p>{result ? 'Cerrar' : 'Seguir intentándolo'}</p>
+            <button
+              type="button"
+              className="gm-sudoku-button-closeWindow"
+              onClick={closeWinnerMessage}
+            >
+              {result ? 'Cerrar' : 'Seguir intentándolo'}
             </button>
           </div>
         )}
