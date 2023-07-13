@@ -118,14 +118,9 @@ Ahora, esperaremos que la pantalla contenga:<br>
 ## Ideas
 
 <ol>
-<li> [] General </li>
-[] Usar una temática general <br>
-[] Western? <br>
-[] Western futuristico <br>
-[] Estilo ciberpunk <br>
-[] Medieval <br>
-[] 80s <br>
-[] Fallout <br>
+<li> [✅] Diseño </li>
+[✅] Usar una temática general <br>
+[✅] Diseñar en Canva <br>
 
 <li> [] Tres en raya </li>
 [] Emojis en base a la temática <br>
