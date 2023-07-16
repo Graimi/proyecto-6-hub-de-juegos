@@ -1,12 +1,11 @@
 :root {
   /* COLOR PALETTE */
-  --gm-color-white: #f8f8f8;
-  --gm-color-blue: #cfe7fe;
-  --gm-color-blue-dark: #5f68d1;
-  --gm-color-yelllow: #f5c764;
-  --gm-color-red: #f98c96;
-  --gm-color-purple: #bc8cf9;
-  --gm-color-black: #131313;
+  --gm-color-black: #1E1934;
+  --gm-color-blue-light: #5F68D1;
+  --gm-color-blue-dark: #211559;
+  --gm-color-green: #C3E740;
+  --gm-color-purple: #9F6ABA;
+  --gm-color-white: #F7F7F9;
 
   /* BACKDROP FILTER */
   /* --gm-backdrop-filter-brightness-card: brightness(87%);
