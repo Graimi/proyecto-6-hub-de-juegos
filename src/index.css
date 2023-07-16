@@ -1,6 +1,7 @@
 :root {
   /* COLOR PALETTE */
   --gm-color-black: #1E1934;
+  --gm-color-blue: #525bb9;
   --gm-color-blue-light: #5F68D1;
   --gm-color-blue-dark: #211559;
   --gm-color-green: #C3E740;
@@ -16,12 +17,10 @@
 
   --gm-opacity-img: 0.75;
 
-  /* 🔴 TYPOGRAPHY TYPE */
-
-  --gm-typography-heading: 'Sen', sans-serif;
-  /* lato */
-  /* square peg */
-  --gm-typography-body: 'Albert Sans', sans-serif;
+  /* TYPOGRAPHY TYPE */
+  --gm-typography-heading: 'Fredoka', sans-serif;
+  --gm-typography-body: 'Roboto Mono', sans-serif;
+  --gm-typography-paragraph: 'Roboto Condensed', sans-serif;
 
   /* 🔴 FONT WEIGHT */
 
@@ -75,7 +74,7 @@
   --gm-border-width-card: 2px;
 
   /* 🔴 BORDER STYLE */
-  --gm-border-card-style: var(--gm-border-width-card) solid var(--gm-color-black);
+  --gm-border-card-style: var(--gm-border-width-card) solid var(--gm-color-blue);
 
   /* 🔴 BOX SHADOW */
 
@@ -107,7 +106,6 @@ dd {
 h1 {
   color: var(--gm-color-blue-dark);
   font-family: var(--gm-typography-heading);
-  font-family: Lato, cursive;
   font-size: var(--gm-typography-h1);
   font-weight: var(--gm-weight-h1);
   text-transform: uppercase;
@@ -117,8 +115,7 @@ h1 {
 
 h2 {
   color: var(--gm-color-blue-dark);
-  font-family: var(--gm-typography-heading);
-  font-family: Lato, cursive;
+  font-family: var(--gm-typography-body);
   font-size: var(--gm-typography-h2);
   font-weight: var(--gm-weight-h2);
   line-height: var(--gm-typography-h2-leading);
@@ -126,7 +123,7 @@ h2 {
 }
 
 h3 {
-  color: var(--gm-color-black);
+  color: var(--gm-color-white);
   font-family: var(--gm-typography-body);
   font-size: var(--gm-typography-h3);
   font-weight: var(--gm-weight-h3);
@@ -136,7 +133,7 @@ h3 {
 
 p {
   /* color: var(--gm-color-primary); */
-  font-family: var(--gm-typography-body);
+  font-family: var(--gm-typography-paragraph);
   font-size: var(--gm-typography-p);
   font-weight: var(--gm-weight-p);
   line-height: var(--gm-typography-p-leading);
@@ -174,9 +171,7 @@ body {
   align-items: center;
   justify-content: center;
   /* Damos estilos al background */
-  background-color: var(--gm-color-blue);
-  background-size: cover;
-  background-position: 50% 10%;
+  background: linear-gradient(to bottom, var(--gm-color-blue-light), var(--gm-color-purple));
 }
 
 /* A elements that don't have a class get default styles */
