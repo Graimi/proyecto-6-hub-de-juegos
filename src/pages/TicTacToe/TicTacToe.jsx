@@ -81,7 +81,7 @@ function TicTacToe() {
                   if (data[index] === null) {
                     // Lanzamos la lógica para meter el jugador en la casilla y cambiar entre ellos
                     data[index] = `${player}`;
-                    setPlayer(player === '❎' ? '🔴' : '❎');
+                    setPlayer(player === '❎' ? 'X' : '❎');
                     checkWinner();
                   }
                 }}
@@ -116,11 +116,13 @@ function TicTacToe() {
       </article>
       {/* Lanzamos el mensaje cuando haya un resultado */}
       {winnerMessage && (
-        <div className="gm-tictactoe-winner">
-          <p>{winnerMessage}</p>
+        <div className="gm-tictactoe-winner window-winner">
+          <h3>{winnerMessage}</h3>
+          {/* <h3>{winnerMessage}</h3> */}
           <button
             type="button"
-            className="gm-tictactoe-button-closeWindow"
+            // className="gm-tictactoe-button-closeWindow"
+            className="cta"
             onClick={closeWinnerMessage}
           >
             Cerrar
