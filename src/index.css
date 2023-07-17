@@ -1,12 +1,13 @@
 :root {
   /* COLOR PALETTE */
-  --gm-color-black: #1E1934;
+  --gm-color-black: #1e1934;
   --gm-color-blue: #525bb9;
-  --gm-color-blue-light: #5F68D1;
+  --gm-color-blue-light: #5f68d1;
   --gm-color-blue-dark: #211559;
-  --gm-color-green: #C3E740;
-  --gm-color-purple: #9F6ABA;
-  --gm-color-white: #F7F7F9;
+  --gm-color-blue-opaque: #2115592a;
+  --gm-color-green: #c3e740;
+  --gm-color-purple: #9f6aba;
+  --gm-color-white: #f7f7f9;
 
   /* BACKDROP FILTER */
   /* --gm-backdrop-filter-brightness-card: brightness(87%);
@@ -53,21 +54,25 @@
   --gm-margin-cta: 15px;
 
   /* 🔴 PADDING */
-  --gm-padding-card: 15px;
+  --gm-padding-container: 15px;
+  --gm-padding-cta: 7px;
 
-  --gm-padding-container: 20px;
-  --gm-padding-cta: 17px;
+  --gm-padding-card: 15px;
 
   --gm-padding-mini-card: 7px;
 
   /* 🔴 GAP */
-  --gm-gap-container: 30px;
+  --gm-gap-container: 20px;
+  --gm-gap-cta: 5px;
 
   --gm-gap-card: 15px;
-  --gm-gap-cta: 12px;
   --gm-gap-mini-card: 5px;
 
   /* 🔴 BORDER RADIUS */
+  --gm-radius-container: 5px;
+  --gm-radius-cta: 5px;
+  --gm-radius-cell: 8px;
+
   --gm-radius-general: 20px;
 
   /* 🔴 BORDER WIDTH */
@@ -75,6 +80,7 @@
 
   /* 🔴 BORDER STYLE */
   --gm-border-card-style: var(--gm-border-width-card) solid var(--gm-color-blue);
+  --gm-border-cta-style: var(--gm-border-width-card) solid var(--gm-color-blue);
 
   /* 🔴 BOX SHADOW */
 
@@ -132,20 +138,12 @@ h3 {
 }
 
 p {
-  /* color: var(--gm-color-primary); */
+  color: var(--gm-color-green);
   font-family: var(--gm-typography-paragraph);
   font-size: var(--gm-typography-p);
   font-weight: var(--gm-weight-p);
   line-height: var(--gm-typography-p-leading);
   opacity: var(--gm-opacity-general);
-}
-
-/* Aplicamos el efecto de overlay a las fuentes */
-/* h1, */
-/* h2, */
-h3,
-p {
-  /* mix-blend-mode: overlay; */
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -196,10 +194,34 @@ select {
   font: inherit;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+footer {
+  color: var(--gm-color-green);
+  font-family: var(--gm-typography-body);
+  font-size: var(--gm-typography-h3);
+  font-weight: 300;
+  line-height: var(--gm-typography-h3-leading);
+}
+
+#gm-button-home {
+  width: 24px;
+}
+
+.cta {
+  background-color: var(--gm-color-blue-dark);
+  color: var(--gm-color-green);
+  font-family: var(--gm-typography-paragraph);
+  text-transform: uppercase;
+  border: var(--gm-border-cta-style);
+  border-radius: var(--gm-radius-cta);
+  border: var(--gm-border-card-style);
+  padding: var(--gm-padding-cta);
+  /* margin: 10px; */
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */

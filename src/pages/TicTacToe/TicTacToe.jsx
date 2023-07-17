@@ -95,10 +95,25 @@ function TicTacToe() {
         </div>
         <h3>Turno: {player}</h3>
       </article>
-      <button type="button" className="gm-tictactoe-button-newGame" onClick={() => newGame()}>
-        <p>Nueva partida</p>
-      </button>
-      <Link to="/">Volver</Link>
+      <article className="gm-tictactoe-buttons">
+        <button
+          type="button"
+          id="gm-tictactoe-button-newGame"
+          className="cta"
+          onClick={() => newGame()}
+        >
+          Nueva partida
+        </button>
+        <button type="button" className="cta">
+          <Link to="/">
+            <img
+              src="https://res.cloudinary.com/dwsffp1eq/image/upload/v1689611695/Hub%20de%20juegos/home_nn7sp1.png"
+              alt="home"
+              id="gm-button-home"
+            />
+          </Link>
+        </button>
+      </article>
       {/* Lanzamos el mensaje cuando haya un resultado */}
       {winnerMessage && (
         <div className="gm-tictactoe-winner">

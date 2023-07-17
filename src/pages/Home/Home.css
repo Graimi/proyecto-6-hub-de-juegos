@@ -16,7 +16,7 @@
     align-items: center;
     padding: var(--gm-padding-card);
     gap: var(--gm-gap-container);
-    width: 250px;
+    /* width: 250px; */
     border: var(--gm-border-card-style);
     border-radius: var(--gm-radius-general);
     background-color: var(--gm-color-blue-dark);
@@ -43,12 +43,7 @@
   }
   .gm-home-games {
     flex-direction: column;
-    /* flex-wrap: wrap; */
 
-  }
-
-  .app {
-    overflow: auto;
   }
 
 }
