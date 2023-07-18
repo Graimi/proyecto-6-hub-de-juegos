@@ -178,9 +178,18 @@ function Hangman() {
     <div className="gm-hangman">
       <h1>El ahorcado</h1>
       <article className="gm-hangman-game">
-        <h3>{lifes}💝</h3>
+        <span className="gm-hangman-life">
+          <h3>{lifes}</h3>
+          <img
+            src="https://res.cloudinary.com/dwsffp1eq/image/upload/v1689695739/Hub%20de%20juegos/corazon_i6fwxr.png"
+            alt="life"
+            className="gm-hangman-life-icon"
+          />
+        </span>
         <h3>Estado de vida: {lifeImg[lifes].img}</h3>
-        <h3>Pista: {hint}</h3>
+        <span className="gm-hangman-hint">
+          <h3>Pista: {hint}</h3>
+        </span>
         <article className="gm-hangman-vocabulary">{vocabularyBoard()}</article>
       </article>
       {GameButtons(newGame)}

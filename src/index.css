@@ -19,8 +19,7 @@
   --gm-opacity-img: 0.75;
 
   /* TYPOGRAPHY TYPE */
-  --gm-typography-heading: 'Fredoka', sans-serif;
-  --gm-typography-heading: 'Unica One', cursive;
+  --gm-typography-heading: 'Unica One';
   --gm-typography-body: 'Roboto Mono', sans-serif;
   --gm-typography-paragraph: 'Roboto Condensed', sans-serif;
 
