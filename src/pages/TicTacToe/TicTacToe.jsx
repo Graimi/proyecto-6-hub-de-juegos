@@ -26,7 +26,10 @@ function TicTacToe() {
 
   // Función encargada de seleccionar al jugador aleatoriamente
   function getRandomPlayer() {
-    const players = ['❎', '🔴'];
+    const players = [
+      'https://res.cloudinary.com/dwsffp1eq/image/upload/v1689618926/Hub%20de%20juegos/cerrar_pab7p3.png',
+      'https://res.cloudinary.com/dwsffp1eq/image/upload/v1689619473/Hub%20de%20juegos/circulo_sbn0mx.png'
+    ];
     const randomIndex = Math.floor(Math.random() * players.length);
     return players[randomIndex];
   }
@@ -45,14 +48,21 @@ function TicTacToe() {
     winningCombinations.forEach((combination) => {
       const [index1, index2, index3] = combination;
       if (data[index1] === player && data[index2] === player && data[index3] === player) {
-        setWinnerMessage(`¡El ganador es: ${player}!`);
+        setWinnerMessage(
+          <span>
+            <h3>
+              ¡El ganador es:
+              <img src={player} alt="player" className="gm-tictactoe-window-player" />!
+            </h3>
+          </span>
+        );
         const game = document.querySelector('.gm-tictactoe-game');
         game.style.display = 'none';
       }
     });
     // Check empate
     if (data.every((cell) => cell !== null)) {
-      setWinnerMessage('¡Empate!');
+      setWinnerMessage(<h3>¡Empate!</h3>);
       const game = document.querySelector('.gm-tictactoe-game');
       game.style.display = 'none';
     }
@@ -74,6 +84,8 @@ function TicTacToe() {
             return (
               // eslint-disable-next-line jsx-a11y/control-has-associated-label
               <button
+                // eslint-disable-next-line react/no-array-index-key
+                key={index}
                 type="button"
                 id={`gm-tictactoe-cell-${index}`}
                 className="gm-tictactoe-cell"
@@ -81,19 +93,26 @@ function TicTacToe() {
                   if (data[index] === null) {
                     // Lanzamos la lógica para meter el jugador en la casilla y cambiar entre ellos
                     data[index] = `${player}`;
-                    setPlayer(player === '❎' ? 'X' : '❎');
+                    setPlayer(
+                      player ===
+                        'https://res.cloudinary.com/dwsffp1eq/image/upload/v1689618926/Hub%20de%20juegos/cerrar_pab7p3.png'
+                        ? 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1689619473/Hub%20de%20juegos/circulo_sbn0mx.png'
+                        : 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1689618926/Hub%20de%20juegos/cerrar_pab7p3.png'
+                    );
                     checkWinner();
                   }
                 }}
                 // Desactiva el botón si la celda ya ha sido seleccionada
                 disabled={data[index] !== null}
               >
-                {space}
+                {space === null ? '' : <img src={space} alt="player" />}
               </button>
             );
           })}
         </div>
-        <h3>Turno: {player}</h3>
+        <h3>
+          Turno: <img src={player} alt="player" className="gm-tictactoe-player" />
+        </h3>
       </article>
       <article className="gm-tictactoe-buttons">
         <button
@@ -117,7 +136,7 @@ function TicTacToe() {
       {/* Lanzamos el mensaje cuando haya un resultado */}
       {winnerMessage && (
         <div className="gm-tictactoe-winner window-winner">
-          <h3>{winnerMessage}</h3>
+          {winnerMessage}
           {/* <h3>{winnerMessage}</h3> */}
           <button
             type="button"

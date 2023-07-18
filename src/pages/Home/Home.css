@@ -15,8 +15,8 @@
     flex-direction: column;
     align-items: center;
     padding: var(--gm-padding-card);
-    gap: var(--gm-gap-container);
-    /* width: 250px; */
+    gap: var(--gm-gap-card);
+    width: 230px;
     border: var(--gm-border-card-style);
     border-radius: var(--gm-radius-general);
     background-color: var(--gm-color-blue-dark);
@@ -25,21 +25,16 @@
 .gm-home-game-text {
   display: flex;
   flex-direction: row;
-  /* gap: 10%; */
-  /* justify-content: space-between; */
 }
 
 .gm-home-game-icon {
-  width: var(--gm-img-big);
-  /* opacity: var(--gm-opacity-img); */
-  /* mix-blend-mode: overlay; */
+  width: var(--gm-img-enormous);
 }
 
 /* TABLET DISPLAY */
 @media screen and (min-width: 425px) and (max-width: 768px) {
   .gm-home {
     overflow: auto;
-    margin-top: 0;
   }
   .gm-home-games {
     flex-direction: column;
@@ -51,7 +46,7 @@
 /* MOBILE DISPLAY */
 @media screen and (max-width: 425px) {
   .gm-home {
-    overflow: scroll;
+    overflow: auto;
   }
   .gm-home-games {
     flex-direction: column;

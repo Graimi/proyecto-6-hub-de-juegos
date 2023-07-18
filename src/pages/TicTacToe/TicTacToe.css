@@ -15,11 +15,6 @@
   border-radius: var(--gm-radius-container);
 }
 
-.gm-tictactoe-game h3 {
-  color: var(--gm-color-blue-dark);
-  font-weight: 500;
-}
-
 .gm-tictactoe-board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -27,13 +22,32 @@
 }
 
 .gm-tictactoe-cell {
-  width: 70px;
-  height: 70px;
+  width: var(--gm-img-big);
+  height: var(--gm-img-big);
   background-color: var(--gm-color-blue-dark);
-  text-align: center;
-  font-size: 24px;
   border: none;
   border-radius: var(--gm-radius-cell);
+}
+
+.gm-tictactoe-cell img {
+  width: var(--gm-img-small);
+  height: var(--gm-img-small);
+  margin: auto;
+}
+
+.gm-tictactoe-game h3 {
+  display: flex;
+  gap: var(--gm-gap-cta);
+  color: var(--gm-color-blue-dark);
+  font-weight: 500;
+}
+
+.gm-tictactoe-player {
+  width: var(--gm-img-small);
+  height: var(--gm-img-small);;
+  background-color: var(--gm-color-blue-dark);
+  border-radius: var(--gm-radius-cell);
+  padding: var(--gm-padding-cta);
 }
 
 .gm-tictactoe-turn {
@@ -45,21 +59,15 @@
   gap: var(--gm-gap-cta);
 }
 
-/*
-.gm-tictactoe-winner {
-  position: fixed;
-  width: inherit;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
-  text-align: center;
-} */
+.gm-tictactoe-window-player {
+  width: var(--gm-img-small);
+  height: var(--gm-img-small);;
+  background-color: var(--gm-color-blue-dark);
+  border-radius: var(--gm-radius-cell);
+  padding: var(--gm-padding-cta);
+}
 
 .gm-tictactoe-winner button {
   /* background-color: black; */
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
