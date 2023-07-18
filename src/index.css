@@ -212,11 +212,7 @@ footer {
   line-height: var(--gm-typography-h3-leading);
 }
 
-#gm-button-home {
-  width: 24px;
-}
-
-.cta {
+.gm-cta {
   width: max-content;
   background-color: var(--gm-color-blue-dark);
   color: var(--gm-color-green);

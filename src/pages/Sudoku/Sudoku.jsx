@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Sudoku.css';
-import { Link } from 'react-router-dom';
 import { makepuzzle, solvepuzzle } from 'sudoku';
+import GameButtons from '../../components/GameButtons/GameButtons';
 
 // Creamos la función para el juego Sudoku
 function Sudoku() {
@@ -126,10 +126,7 @@ function Sudoku() {
             Comprobar
           </button>
         </article>
-        <button type="button" className="gm-sudoku-button-newGame" onClick={() => newGame()}>
-          Nueva partida
-        </button>
-        <Link to="/">Volver</Link>
+        {GameButtons(newGame)}
         {/* Lanzamos el mensaje cuando haya un resultado */}
         {winnerMessage && (
           <div className="gm-sudoku-winner">

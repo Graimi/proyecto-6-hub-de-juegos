@@ -54,20 +54,10 @@
   color: var(--gm-color-blue-dark);
 }
 
-.gm-tictactoe-buttons {
-  display: flex;
-  gap: var(--gm-gap-cta);
-}
-
 .gm-tictactoe-window-player {
   width: var(--gm-img-small);
   height: var(--gm-img-small);;
   background-color: var(--gm-color-blue-dark);
   border-radius: var(--gm-radius-cell);
   padding: var(--gm-padding-cta);
-}
-
-.gm-tictactoe-winner button {
-  /* background-color: black; */
-  /* margin-top: 10px; */
 }

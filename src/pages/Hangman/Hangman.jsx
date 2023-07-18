@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Hangman.css';
-import { Link } from 'react-router-dom';
+import GameButtons from '../../components/GameButtons/GameButtons';
 
 // Creamos la función para el juego El ahorcado
 function Hangman() {
@@ -183,10 +183,7 @@ function Hangman() {
         <h3>Pista: {hint}</h3>
         <article className="gm-hangman-vocabulary">{vocabularyBoard()}</article>
       </article>
-      <button type="button" className="gm-hangman-button-newGame" onClick={() => newGame()}>
-        <p>Nueva partida</p>
-      </button>
-      <Link to="/">Volver</Link>
+      {GameButtons(newGame)}
       {/* Lanzamos el mensaje cuando haya un resultado */}
       {winnerMessage && (
         <div className="gm-hangman-winner">

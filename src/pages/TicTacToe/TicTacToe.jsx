@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './TicTacToe.css';
-import { Link } from 'react-router-dom';
+import GameButtons from '../../components/GameButtons/GameButtons';
 
 // Creamos la función para el juego Tres en Raya
 function TicTacToe() {
@@ -49,12 +49,10 @@ function TicTacToe() {
       const [index1, index2, index3] = combination;
       if (data[index1] === player && data[index2] === player && data[index3] === player) {
         setWinnerMessage(
-          <span>
-            <h3>
-              ¡El ganador es:
-              <img src={player} alt="player" className="gm-tictactoe-window-player" />!
-            </h3>
-          </span>
+          <h3>
+            ¡El ganador es:
+            <img src={player} alt="player" className="gm-tictactoe-window-player" />!
+          </h3>
         );
         const game = document.querySelector('.gm-tictactoe-game');
         game.style.display = 'none';
@@ -114,36 +112,13 @@ function TicTacToe() {
           Turno: <img src={player} alt="player" className="gm-tictactoe-player" />
         </h3>
       </article>
-      <article className="gm-tictactoe-buttons">
-        <button
-          type="button"
-          id="gm-tictactoe-button-newGame"
-          className="cta"
-          onClick={() => newGame()}
-        >
-          Nueva partida
-        </button>
-        <button type="button" className="cta">
-          <Link to="/">
-            <img
-              src="https://res.cloudinary.com/dwsffp1eq/image/upload/v1689611695/Hub%20de%20juegos/home_nn7sp1.png"
-              alt="home"
-              id="gm-button-home"
-            />
-          </Link>
-        </button>
-      </article>
+      {GameButtons(newGame)}
       {/* Lanzamos el mensaje cuando haya un resultado */}
       {winnerMessage && (
         <div className="gm-tictactoe-winner window-winner">
           {winnerMessage}
           {/* <h3>{winnerMessage}</h3> */}
-          <button
-            type="button"
-            // className="gm-tictactoe-button-closeWindow"
-            className="cta"
-            onClick={closeWinnerMessage}
-          >
+          <button type="button" className="gm-cta" onClick={closeWinnerMessage}>
             Cerrar
           </button>
         </div>
