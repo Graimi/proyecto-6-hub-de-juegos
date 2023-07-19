@@ -31,22 +31,19 @@ function Hangman() {
   // Creamos un array para almacenar las imágenes según las vidas que falten
   const lifeImg = [
     {
-      img: '0'
+      img: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1689790399/Hub%20de%20juegos/state1_vawdne.png'
     },
     {
-      img: '1'
+      img: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1689790399/Hub%20de%20juegos/state2_hzn79h.png'
     },
     {
-      img: '2'
+      img: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1689790399/Hub%20de%20juegos/state3_ajkkq6.png'
     },
     {
-      img: '3'
+      img: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1689790398/Hub%20de%20juegos/state4_q98dmp.png'
     },
     {
-      img: '4'
-    },
-    {
-      img: '5'
+      img: 'https://res.cloudinary.com/dwsffp1eq/image/upload/v1689790123/Hub%20de%20juegos/state5b_i19ele.png'
     }
   ];
 
@@ -141,7 +138,7 @@ function Hangman() {
   function getRandomWord() {
     const randomIndex = Math.floor(Math.random() * words.length);
     const selectedWord = words[randomIndex].toUpperCase().split('');
-    const maskedWord = '❔'.repeat(selectedWord.length);
+    const maskedWord = '_'.repeat(selectedWord.length);
     setWord(maskedWord);
     setHint(maskedWord);
     return selectedWord;
@@ -163,7 +160,7 @@ function Hangman() {
     const game = document.querySelector('.gm-hangman-game');
     game.style.display = 'flex';
     setWord(getRandomWord());
-    setLifes(5);
+    setLifes(4);
     vocabularyDefault();
   }
 
@@ -179,32 +176,32 @@ function Hangman() {
       <h1>El ahorcado</h1>
       <article className="gm-hangman-game">
         <span className="gm-hangman-life">
-          <h3>{lifes}</h3>
+          <p>{lifes}</p>
           <img
             src="https://res.cloudinary.com/dwsffp1eq/image/upload/v1689695739/Hub%20de%20juegos/corazon_i6fwxr.png"
             alt="life"
             className="gm-hangman-life-icon"
           />
         </span>
-        <h3>Estado de vida: {lifeImg[lifes].img}</h3>
+        <span className="gm-hangman-state">
+          {/* <h3>Estado de vida: </h3> */}
+          <img src={lifeImg[lifes].img} alt="life-state" />
+        </span>
         <span className="gm-hangman-hint">
-          <h3>Pista: {hint}</h3>
+          <h3>Pista: </h3> <h3 id="hint">{hint}</h3>
         </span>
         <article className="gm-hangman-vocabulary">{vocabularyBoard()}</article>
       </article>
       {GameButtons(newGame)}
       {/* Lanzamos el mensaje cuando haya un resultado */}
       {winnerMessage && (
-        <div className="gm-hangman-winner">
-          <p>{winnerMessage}</p>
-          <p>La palabra era</p>
-          <h3>{word}</h3>
-          <button
-            type="button"
-            className="gm-hangman-button-closeWindow"
-            onClick={closeWinnerMessage}
-          >
-            <p>Cerrar</p>
+        <div className="gm-hangman-winner window-winner">
+          <h3>{winnerMessage}</h3>
+          <img src={lifeImg[0].img} alt="hangman" className="gm-hangman-logo" />
+          {/* <h3>Palabra:</h3> */}
+          <h2>{word}</h2>
+          <button type="button" className="gm-cta" onClick={closeWinnerMessage}>
+            Cerrar
           </button>
         </div>
       )}
