@@ -11,8 +11,8 @@
   align-items: center;
   padding: var(--gm-padding-container);
   gap: var(--gm-gap-container);
-  background-color: var(--gm-color-blue-opaque);
   border-radius: var(--gm-radius-container);
+  background-color: var(--gm-color-blue-opaque);
 }
 
 .gm-tictactoe-board {
@@ -24,9 +24,9 @@
 .gm-tictactoe-cell {
   width: var(--gm-img-big);
   height: var(--gm-img-big);
-  background-color: var(--gm-color-blue-dark);
   border: none;
   border-radius: var(--gm-radius-cell);
+  background-color: var(--gm-color-blue-dark);
 }
 
 .gm-tictactoe-cell img {
@@ -44,10 +44,10 @@
 
 .gm-tictactoe-player {
   width: var(--gm-img-small);
-  height: var(--gm-img-small);;
-  background-color: var(--gm-color-blue-dark);
-  border-radius: var(--gm-radius-cell);
+  height: var(--gm-img-small);
   padding: var(--gm-padding-cta);
+  border-radius: var(--gm-radius-cell);
+  background-color: var(--gm-color-blue-dark);
 }
 
 .gm-tictactoe-turn {
@@ -57,7 +57,7 @@
 .gm-tictactoe-window-player {
   width: var(--gm-img-small);
   height: var(--gm-img-small);
-  background-color: var(--gm-color-blue-dark);
-  border-radius: var(--gm-radius-cell);
   padding: var(--gm-padding-cta);
+  border-radius: var(--gm-radius-cell);
+  background-color: var(--gm-color-blue-dark);
 }
