@@ -73,7 +73,7 @@
   /* 🔴 BORDER RADIUS */
   --gm-radius-container: 5px;
   --gm-radius-cta: 5px;
-  --gm-radius-cell: 8px;
+  --gm-radius-cell: 5px;
 
   --gm-radius-general: 20px;
 
@@ -84,6 +84,8 @@
   --gm-border-card-style: var(--gm-border-width-card) solid var(--gm-color-blue);
   --gm-border-cta-style: var(--gm-border-width-card) solid var(--gm-color-blue);
   --gm-border-window-style: 3px solid var(--gm-color-blue-opaque);
+  --gm-border-sudoku-blue: 1px solid var(--gm-color-blue);
+  --gm-border-sudoku-green: 1px solid var(--gm-color-green);
 
   /* 🔴 BOX SHADOW */
 

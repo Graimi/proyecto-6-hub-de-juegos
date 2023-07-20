@@ -2,69 +2,121 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* gap: 10px; */
+  gap: var(--gm-gap-container);
 }
 
 .gm-sudoku-game {
   display: none;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  padding: var(--gm-padding-container);
+  gap: var(--gm-gap-container);
+  border-radius: var(--gm-radius-container);
+  background-color: var(--gm-color-blue-opaque);
 }
+
 .gm-sudoku-board {
   /* width: 100px; */
   display: grid;
-  grid-template-columns: repeat(9, 40px);
-  grid-template-rows: repeat(9, 1fr);
+  grid-template-columns: repeat(9, 35px);
+  grid-template-rows: repeat(9, 35px);
   text-align: center;
-  gap: 1px;
-  border: 5px solid #af2727;
-}
-
-.gm-sudoku-cell-original {
-  background-color: gray;
+  /* grid-gap: 1px; */
+  font-family: var(--gm-typography-body);
+  /* gap: 1px; */
+  /* border: 5px solid #af2727; */
 }
 
 .gm-sudoku-cell {
   /* display: flex; */
-  align-items: center;
+  /* align-items: center; */
   text-align: center;
-  justify-content: center;
+  /* justify-content: center; */
   background-color: white;
-  border: 1px solid #000;
-  /* border: none; */
+  color: var(--gm-color-white);
+  border: 1px solid var(--gm-color-blue);
+    /* border: none; */
+  /* border-radius: var(--gm-radius-cell); */
+  background-color: #2115599d;
+
 }
 
 .gm-sudoku-cell:disabled {
-  margin: 0;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
-  background-color: rgb(192, 192, 192);
-  border: 1px solid #000;
-  /* border: none; */
+  color: var(--gm-color-green);
+  background-color: var(--gm-color-blue-dark);
+}
+
+.gm-sudoku-cell:focus {
+  outline-color: var(--gm-color-green);
 }
 
 /* Con las siguientes asignaciones conseguimos que se marquen los bordes cada 3x3 casillas */
 .gm-sudoku-cell:nth-child(3n) {
-  border-right: 5px solid #913b3b;
+  border-right: var(--gm-border-sudoku-green);
+}
+
+.gm-sudoku-cell:nth-child(3n+1) {
+  border-left: var(--gm-border-sudoku-green);
+}
+
+.gm-sudoku-cell:nth-child(9n-8) {
+  border-left: var(--gm-border-sudoku-blue);
+}
+
+.gm-sudoku-cell:nth-child(9n) {
+  border-right: var(--gm-border-sudoku-blue);
 }
 
 .gm-sudoku-cell:nth-child(1n + 19) {
-  border-bottom: 5px solid #af2727;
+  border-bottom: var(--gm-border-sudoku-green);
 }
 
 .gm-sudoku-cell:nth-child(1n + 28) {
-  border-bottom: 1px solid #000;
+  border-top: var(--gm-border-sudoku-green);
 }
 
-.gm-sudoku-cell:nth-child(1n + 46) {
-  border-bottom: 5px solid #af2727;
+.gm-sudoku-cell:nth-child(1n + 37) {
+  border-top: var(--gm-border-sudoku-blue);
 }
 
 .gm-sudoku-cell:nth-child(1n + 55) {
-  border-bottom: 1px solid #000;
+  border-top: var(--gm-border-sudoku-green);
+}
+
+.gm-sudoku-cell:nth-child(1n + 64) {
+  border-top: var(--gm-border-sudoku-blue);
+}
+
+.gm-sudoku-cell:nth-child(1n + 28) {
+  border-bottom: var(--gm-border-sudoku-blue);
+}
+
+.gm-sudoku-cell:nth-child(1n + 46) {
+  border-bottom: var(--gm-border-sudoku-green);
+}
+
+.gm-sudoku-cell:nth-child(1n + 55) {
+  border-bottom: var(--gm-border-sudoku-blue);
+}
+
+.gm-sudoku-buttons {
+  display: flex;
+  gap: var(--gm-gap-cta);
+}
+
+.gm-sudoku-buttons button {
+  color: var(--gm-color-white);
+  border-color: var(--gm-color-blue);
+  background-color: var(--gm-color-black);
+}
+
+.gm-sudoku-buttons button:disabled{
+  background-color: #1e1934a9;
+  pointer-events: none;
 }
 
 .gm-sudoku-winner {

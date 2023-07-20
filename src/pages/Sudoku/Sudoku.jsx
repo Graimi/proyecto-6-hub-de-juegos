@@ -37,7 +37,7 @@ function Sudoku() {
 
     // Validamos que el número ingresado esté entre 0 y 8
     if (inputValue !== null && (inputValue < 0 || inputValue > 8)) {
-      alert('El número tiene que estar entre 0 y 9');
+      alert('El número tiene que estar entre 0 y 8');
       return;
     }
 
@@ -113,18 +113,20 @@ function Sudoku() {
               return renderCell(number, index);
             })}
           </div>
-          <button type="button" className="gm-sudoku-button-resolve" onClick={resolveSudoku}>
-            Ver la solución
-          </button>
-          <button
-            type="button"
-            className="gm-sudoku-button-check"
-            onClick={() => checkSudoku()}
-            // Si no se han llenado todas las casillas se desactiva
-            disabled={!completed}
-          >
-            Comprobar
-          </button>
+          <article className="gm-sudoku-buttons">
+            <button type="button" className="gm-cta" onClick={resolveSudoku}>
+              Ver la solución
+            </button>
+            <button
+              type="button"
+              className="gm-cta"
+              onClick={() => checkSudoku()}
+              // Si no se han llenado todas las casillas se desactiva
+              disabled={!completed}
+            >
+              Comprobar
+            </button>
+          </article>
         </article>
         {GameButtons(newGame)}
         {/* Lanzamos el mensaje cuando haya un resultado */}
