@@ -29,7 +29,6 @@
   color: var(--gm-color-white);
   border: 1px solid var(--gm-color-blue);
   background-color: #2115599d;
-
 }
 
 .gm-sudoku-cell:disabled {
