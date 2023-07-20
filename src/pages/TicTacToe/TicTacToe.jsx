@@ -115,7 +115,7 @@ function TicTacToe() {
       {GameButtons(newGame)}
       {/* Lanzamos el mensaje cuando haya un resultado */}
       {winnerMessage && (
-        <div className="gm-tictactoe-winner window-winner">
+        <div className="window-winner">
           {winnerMessage}
           {/* <h3>{winnerMessage}</h3> */}
           <button type="button" className="gm-cta" onClick={closeWinnerMessage}>

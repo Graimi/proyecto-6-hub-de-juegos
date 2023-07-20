@@ -20,7 +20,7 @@
   height: 30px;
   padding: var(--gm-padding-cta);
   gap: var(--gm-gap-cta);
-  border-radius: var(--gm-radius-cta);
+  border-radius: var(--gm-radius-general);
   background-color: var(--gm-color-blue-dark);
 }
 
@@ -40,7 +40,7 @@
 .gm-hangman-hint {
   display: flex;
   padding: var(--gm-padding-container);
-  border-radius: var(--gm-radius-container);
+  border-radius: var(--gm-radius-general);
   background-color: var(--gm-color-blue-opaque);
 }
 
@@ -69,7 +69,7 @@
   font-family: var(--gm-typography-heading);
   font-size: 20px;
   border: none;
-  border-radius: var(--gm-radius-cta);
+  border-radius: var(--gm-radius-general);
   background-color: var(--gm-color-blue-dark);
 }
 

@@ -18,7 +18,7 @@
     gap: var(--gm-gap-card);
     width: 230px;
     border: var(--gm-border-card-style);
-    border-radius: var(--gm-radius-general);
+    border-radius: 20px;
     background-color: var(--gm-color-blue-dark);
   }
 

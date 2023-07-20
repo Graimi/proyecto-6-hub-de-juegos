@@ -9,11 +9,6 @@
   --gm-color-purple: #9f6aba;
   --gm-color-white: #f7f7f9;
 
-  /* 🔴 OPACITY */
-  /* --gm-opacity-text: 0.9; */
-
-  --gm-opacity-img: 0.75;
-
   /* TYPOGRAPHY TYPE */
   --gm-typography-heading: 'Unica One';
   --gm-typography-body: 'Roboto Mono', sans-serif;
@@ -25,67 +20,47 @@
   --gm-weight-h3: 200;
   --gm-weight-p: 200;
 
-  /* 🔴 FONT SIZE */
+  /* FONT SIZE */
   --gm-typography-h1: 48px;
   --gm-typography-h2: 32px;
   --gm-typography-h3: 25px;
   --gm-typography-p: 16px;
 
-  /* 🔴 LEADING */
+  /* LEADING */
   --gm-typography-h1-leading: 1.2;
   --gm-typography-h2-leading: 1.2;
   --gm-typography-h3-leading: 1.2;
   --gm-typography-p-leading: 1.5;
 
-  /* 🔴 IMG SIZE */
+  /* IMG SIZE */
   --gm-img-enormous: 96px;
   --gm-img-big: 80px;
   --gm-img-medium: 64px;
   --gm-img-small: 32px;
   --gm-img-mini: 16px;
 
-  /* 🔴 MARGIN */
-
-  --gm-margin-container: 15px;
-  --gm-margin-cta: 15px;
-
-  /* 🔴 PADDING */
+  /* PADDING */
   --gm-padding-container: 20px;
-  --gm-padding-cta: 7px;
-  /* --gm-padding-window: 20px; */
-
   --gm-padding-card: 15px;
+  --gm-padding-cta: 7px;
 
-  --gm-padding-mini-card: 7px;
-
-  /* 🔴 GAP */
+  /* GAP */
   --gm-gap-container: 20px;
+  --gm-gap-card: 15px;
   --gm-gap-cta: 5px;
 
-  --gm-gap-card: 15px;
-  --gm-gap-mini-card: 5px;
+  /* BORDER RADIUS */
+  --gm-radius-general: 5px;
 
-  /* 🔴 BORDER RADIUS */
-  --gm-radius-container: 5px;
-  --gm-radius-cta: 5px;
-  --gm-radius-cell: 5px;
-
-  --gm-radius-general: 20px;
-
-  /* 🔴 BORDER WIDTH */
+  /* BORDER WIDTH */
   --gm-border-width-card: 2px;
 
-  /* 🔴 BORDER STYLE */
+  /* BORDER STYLE */
   --gm-border-card-style: var(--gm-border-width-card) solid var(--gm-color-blue);
   --gm-border-cta-style: var(--gm-border-width-card) solid var(--gm-color-blue);
-  --gm-border-window-style: 3px solid var(--gm-color-blue-opaque);
+  --gm-border-window-style: 4px solid var(--gm-color-blue-opaque);
   --gm-border-sudoku-blue: 1px solid var(--gm-color-blue);
   --gm-border-sudoku-green: 1px solid var(--gm-color-green);
-
-  /* 🔴 BOX SHADOW */
-
-  --gm-box-shadow-container: 0 0 20px 1px rgba(43, 42, 42, 0.2);
-  --gm-box-shadow-mini-card: 0 3px 9px 1px rgba(43, 42, 42, 0.3);
 }
 
 /* Box sizing rules */
@@ -116,7 +91,6 @@ h1 {
   font-weight: var(--gm-weight-h1);
   text-transform: uppercase;
   line-height: var(--gm-typography-h1-leading);
-  opacity: var(--gm-opacity-general);
 }
 
 h2 {
@@ -125,7 +99,6 @@ h2 {
   font-size: var(--gm-typography-h2);
   font-weight: var(--gm-weight-h2);
   line-height: var(--gm-typography-h2-leading);
-  opacity: var(--gm-opacity-general);
 }
 
 h3 {
@@ -134,7 +107,6 @@ h3 {
   font-size: var(--gm-typography-h3);
   font-weight: var(--gm-weight-h3);
   line-height: var(--gm-typography-h3-leading);
-  opacity: var(--gm-opacity-general);
 }
 
 p {
@@ -143,7 +115,6 @@ p {
   font-size: var(--gm-typography-p);
   font-weight: var(--gm-weight-p);
   line-height: var(--gm-typography-p-leading);
-  opacity: var(--gm-opacity-general);
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -169,7 +140,7 @@ body {
   align-items: center;
   justify-content: center;
   /* Damos estilos al background */
-  background: linear-gradient(to bottom, var(--gm-color-blue-light), var(--gm-color-purple));
+  background: linear-gradient(to bottom, var(--gm-color-blue), var(--gm-color-purple));
 }
 
 /* A elements that don't have a class get default styles */
@@ -210,15 +181,13 @@ footer {
 
 .gm-cta {
   width: max-content;
+  text-transform: uppercase;
+  padding: var(--gm-padding-cta);
   background-color: var(--gm-color-blue-dark);
   color: var(--gm-color-green);
   font-family: var(--gm-typography-paragraph);
-  text-transform: uppercase;
   border: var(--gm-border-cta-style);
-  border-radius: var(--gm-radius-cta);
-  border: var(--gm-border-card-style);
-  padding: var(--gm-padding-cta);
-  /* margin: 10px; */
+  border-radius: var(--gm-radius-general);
 }
 
 .window-winner {
@@ -232,18 +201,17 @@ footer {
   width: 80%;
   max-width: 500px;
   min-height: 250px;
-  text-align: center;
-  transform: translate(-50%, -50%);
   padding: 40px;
-  /* gap: var(--gm-gap-container); */
   gap: 30px;
+  text-align: center;
+  color: var(--gm-color-blue-dark);
+  transform: translate(-50%, -50%);
   background-color: var(--gm-color-blue-opaque);
   backdrop-filter: blur(10px);
   border: var(--gm-border-window-style);
-  border-radius: var(--gm-radius-cta);
+  border-radius: var(--gm-radius-general);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 9999;
-  color: var(--gm-color-blue-dark);
 }
 
 .window-winner h3 {
@@ -254,7 +222,6 @@ footer {
   font-weight: 500;
   text-transform: uppercase;
 }
-
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {

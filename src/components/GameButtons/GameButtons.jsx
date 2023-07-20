@@ -14,15 +14,15 @@ function GameButtons(newGame) {
       >
         <p>Nueva partida</p>
       </button>
-      <button type="button" className="gm-cta">
-        <Link to="/">
+      <Link to="/">
+        <button type="button" className="gm-cta">
           <img
             src="https://res.cloudinary.com/dwsffp1eq/image/upload/v1689611695/Hub%20de%20juegos/home_nn7sp1.png"
             alt="home"
             className="gm-button-home"
           />
-        </Link>
-      </button>
+        </button>
+      </Link>
     </article>
   );
 }
