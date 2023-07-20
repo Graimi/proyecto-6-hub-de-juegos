@@ -131,20 +131,18 @@ function Sudoku() {
         {GameButtons(newGame)}
         {/* Lanzamos el mensaje cuando haya un resultado */}
         {winnerMessage && (
-          <div className="gm-sudoku-winner">
-            <p>{winnerMessage}</p>
-            {!result && (
-              <button type="button" className="gm-sudoku-button-resolve" onClick={resolveSudoku}>
-                Ver la solución
+          <div className="gm-sudoku-winner window-winner">
+            <h3>{winnerMessage}</h3>
+            <article className="gm-sudoku-buttons-window">
+              {!result && (
+                <button type="button" className="gm-cta" onClick={resolveSudoku}>
+                  Ver la solución
+                </button>
+              )}
+              <button type="button" className="gm-cta" onClick={closeWinnerMessage}>
+                {result ? 'Cerrar' : 'Seguir intentándolo'}
               </button>
-            )}
-            <button
-              type="button"
-              className="gm-sudoku-button-closeWindow"
-              onClick={closeWinnerMessage}
-            >
-              {result ? 'Cerrar' : 'Seguir intentándolo'}
-            </button>
+            </article>
           </div>
         )}
       </div>
