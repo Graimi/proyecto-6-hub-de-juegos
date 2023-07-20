@@ -9,10 +9,6 @@
   --gm-color-purple: #9f6aba;
   --gm-color-white: #f7f7f9;
 
-  /* BACKDROP FILTER */
-  /* --gm-backdrop-filter-brightness-card: brightness(87%);
-  --gm-backdrop-filter-brightness-cta: brightness(80%); */
-
   /* 🔴 OPACITY */
   /* --gm-opacity-text: 0.9; */
 
@@ -23,8 +19,7 @@
   --gm-typography-body: 'Roboto Mono', sans-serif;
   --gm-typography-paragraph: 'Roboto Condensed', sans-serif;
 
-  /* 🔴 FONT WEIGHT */
-
+  /* FONT WEIGHT */
   --gm-weight-h1: 700;
   --gm-weight-h2: 400;
   --gm-weight-h3: 200;
@@ -55,7 +50,7 @@
   --gm-margin-cta: 15px;
 
   /* 🔴 PADDING */
-  --gm-padding-container: 15px;
+  --gm-padding-container: 20px;
   --gm-padding-cta: 7px;
   /* --gm-padding-window: 20px; */
 

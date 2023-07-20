@@ -16,23 +16,16 @@
 }
 
 .gm-sudoku-board {
-  /* width: 100px; */
   display: grid;
-  grid-template-columns: repeat(9, 35px);
-  grid-template-rows: repeat(9, 35px);
+  grid-template-columns: repeat(9, 42px);
+  grid-template-rows: repeat(9, 42px);
   text-align: center;
-  /* grid-gap: 1px; */
   font-family: var(--gm-typography-body);
-  /* gap: 1px; */
-  /* border: 5px solid #af2727; */
+  font-size: 21px;
 }
 
 .gm-sudoku-cell {
-  /* display: flex; */
-  /* align-items: center; */
   text-align: center;
-  /* justify-content: center; */
-  background-color: white;
   color: var(--gm-color-white);
   border: 1px solid var(--gm-color-blue);
   background-color: #2115599d;
