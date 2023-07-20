@@ -16,16 +16,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
+  width: 60px;
   height: 30px;
-  background-color: var(--gm-color-blue-dark);
   padding: var(--gm-padding-cta);
   gap: var(--gm-gap-cta);
   border-radius: var(--gm-radius-cta);
+  background-color: var(--gm-color-blue-dark);
 }
 
 .gm-hangman-life p {
-  font-weight: 400;
+  font-weight: var(--gm-weight-h2);
 }
 
 .gm-hangman-life-icon {
@@ -35,20 +35,18 @@
 
 .gm-hangman-state {
   width: 195px;
-  /* height: var(--gm-img-enormous); */
 }
 
 .gm-hangman-hint {
   display: flex;
   padding: var(--gm-padding-container);
-  background-color: var(--gm-color-blue-opaque);
   border-radius: var(--gm-radius-container);
-  
+  background-color: var(--gm-color-blue-opaque);
 }
 
 .gm-hangman-hint h3 {
   color: var(--gm-color-blue-dark);
-  font-weight: 400;
+  font-weight: var(--gm-weight-h2);
   text-transform: uppercase;
 }
 
@@ -67,24 +65,24 @@
 .gm-hangman-letter {
   width: var(--gm-img-small);
   height: var(--gm-img-small);
-  background-color: var(--gm-color-blue-dark);
-  border: none;
-  border-radius: var(--gm-radius-cta);
   color: var(--gm-color-white);
   font-family: var(--gm-typography-heading);
   font-size: 20px;
+  border: none;
+  border-radius: var(--gm-radius-cta);
+  background-color: var(--gm-color-blue-dark);
 }
 
-/* .check  */
+/* Estilos cuando la letra aparece */
 .good {
-  background-color: var(--gm-color-green);
   color: var(--gm-color-blue-dark);
+  background-color: var(--gm-color-green);
 }
 
-/* .check */
+/* Estilos cuando la letra es incorrecta */
 .bad {
-  background-color: var(--gm-color-blue-opaque);
   color: var(--gm-color-white);
+  background-color: var(--gm-color-blue-opaque);
 }
 
 .gm-hangman-winner h2 {
