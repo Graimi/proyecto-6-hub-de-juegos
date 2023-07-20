@@ -50,7 +50,7 @@
   border-right: var(--gm-border-sudoku-green);
 }
 
-.gm-sudoku-cell:nth-child(3n+1) {
+.gm-sudoku-cell:nth-child(3n + 1) {
   border-left: var(--gm-border-sudoku-green);
 }
 
@@ -106,7 +106,7 @@
   background-color: var(--gm-color-black);
 }
 
-.gm-sudoku-buttons button:disabled{
+.gm-sudoku-buttons button:disabled {
   background-color: #1e1934a9;
   pointer-events: none;
 }
@@ -118,6 +118,10 @@
     grid-template-rows: repeat(9, 40px);
     font-size: 20px;
   }
+  .gm-sudoku-buttons-window {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* MOBILE DISPLAY */
@@ -126,5 +130,9 @@
     grid-template-columns: repeat(9, 36px);
     grid-template-rows: repeat(9, 36px);
     font-size: 18px;
+  }
+  .gm-sudoku-buttons-window {
+    flex-direction: column;
+    align-items: center;
   }
 }

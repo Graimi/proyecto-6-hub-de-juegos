@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './components/Window/Window.css';
 import { Outlet } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 
