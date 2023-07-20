@@ -80,7 +80,7 @@ function Hangman() {
   // Creamos el siguiente useEffect para lanzar el mensaje de ganador cuando acierte el jugador
   useEffect(() => {
     if (word && hint === word.join('')) {
-      setWinnerMessage('Enhorabuena, ¡te has librado!');
+      setWinnerMessage(<h3>Enhorabuena, ¡te has librado!</h3>);
       const game = document.querySelector('.gm-hangman-game');
       game.style.display = 'none';
     }
@@ -89,7 +89,12 @@ function Hangman() {
   // Creamos el siguiente useEffect para lanzar el mensaje de fallo cuando falle el jugador
   useEffect(() => {
     if (lifes === 0) {
-      setWinnerMessage('Lo siento, has sido ahorcado');
+      setWinnerMessage(
+        <h3>
+          Lo siento, has sido ahorcado
+          <img src={lifeImg[0].img} alt="hangman" className="gm-hangman-logo" />
+        </h3>
+      );
       const game = document.querySelector('.gm-hangman-game');
       game.style.display = 'none';
     }
@@ -196,9 +201,7 @@ function Hangman() {
       {/* Lanzamos el mensaje cuando haya un resultado */}
       {winnerMessage && (
         <div className="gm-hangman-winner window-winner">
-          <h3>{winnerMessage}</h3>
-          <img src={lifeImg[0].img} alt="hangman" className="gm-hangman-logo" />
-          {/* <h3>Palabra:</h3> */}
+          {winnerMessage}
           <h2>{word}</h2>
           <button type="button" className="gm-cta" onClick={closeWinnerMessage}>
             Cerrar
