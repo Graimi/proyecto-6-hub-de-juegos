@@ -13,6 +13,7 @@
   gap: var(--gm-gap-container);
   border-radius: var(--gm-radius-general);
   background-color: var(--gm-color-blue-opaque);
+  /* transform: scale(0.7); */
 }
 
 .gm-sudoku-board {
@@ -108,4 +109,22 @@
 .gm-sudoku-buttons button:disabled{
   background-color: #1e1934a9;
   pointer-events: none;
+}
+
+/* TABLET DISPLAY */
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .gm-sudoku-board {
+    grid-template-columns: repeat(9, 40px);
+    grid-template-rows: repeat(9, 40px);
+    font-size: 20px;
+  }
+}
+
+/* MOBILE DISPLAY */
+@media screen and (max-width: 425px) {
+  .gm-sudoku-board {
+    grid-template-columns: repeat(9, 36px);
+    grid-template-rows: repeat(9, 36px);
+    font-size: 18px;
+  }
 }

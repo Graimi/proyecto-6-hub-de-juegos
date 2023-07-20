@@ -9,6 +9,7 @@ import Hangman from './pages/Hangman/Hangman';
 import Sudoku from './pages/Sudoku/Sudoku';
 import Error from './pages/Error/Error';
 
+// Usamos ReactDom para crear las diferentes rutas a las páginas
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter basename="/">
