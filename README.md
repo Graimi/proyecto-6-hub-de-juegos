@@ -122,57 +122,53 @@ Ahora, esperaremos que la pantalla contenga:<br>
 [✅] Usar una temática general <br>
 [✅] Diseñar en Canva <br>
 
-<li> [] Tres en raya </li>
-[] Emojis en base a la temática <br>
-[] Si western pues fichas casino <br>
+<li> [✅] Tres en raya </li>
 
-<li> [] Ahorcado </li>
-[] Crear un state que almacene el número de vidas <br>
-[] A través del usestate crear un array que refleje las vidas y la secuencia <br>
-[] Secuencia de imágenes para el ahorcado <br>
-[] Un duelo por ejemplo, o un lazo que se tira al ahorcado <br>
+<li> [✅] Ahorcado </li>
+[✅] Crear un state que almacene el número de vidas <br>
+[✅] A través del usestate crear un array que refleje las vidas y la secuencia <br>
+[✅] Secuencia de imágenes para el ahorcado <br>
 
-<li> [] Sudoku </li>
-[] Aplicar el estilo general <br>
+<li> [✅] Sudoku </li>
+[✅] Aplicar el estilo general <br>
 </ol>
 
 ## Pasos
 
 <ol>
-<li> [] HTML </li>
-[] Código redactado en REACT <br>
-[] Metdatos <br>
+<li> [✅] HTML </li>
+[✅] Código redactado en REACT <br>
+[✅] Metdatos <br>
 
-<li> [] CSS </li>
-[] General <br>
-[] Componentes <br>
-[] Pages <br>
-[] Root limpio <br>
-[] Propiedades de acuerdo al root <br>
-[] Medias queries <br>
+<li> [✅] CSS </li>
+[✅] General <br>
+[✅] Componentes <br>
+[✅] Pages <br>
+[✅] Root limpio <br>
+[✅] Propiedades de acuerdo al root <br>
+[✅] Medias queries <br>
 
-<li> [] REACT </li>
-[] General <br>
-[] Componentes <br>
-[] Pages <br>
-[] Investigar hooks <br>
+<li> [✅] REACT </li>
+[✅] General <br>
+[✅] Componentes <br>
+[✅] Pages <br>
 <br>
 
-<li> [] Componentes y pages finalizados y comentados </li>
-[] App <br>
-[] Main <br>
-[] Index <br>
+<li> [✅] Componentes y pages finalizados y comentados </li>
+[✅] App <br>
+[✅] Main <br>
+[✅] Index <br>
 <br>
 
-<li> [] Diseño </li>
-[] Estilos generales <br>
-[] Iconos generales <br>
-[] Fuentes tipográficas <br>
+<li> [✅] Diseño </li>
+[✅] Estilos generales <br>
+[✅] Iconos generales <br>
+[✅] Fuentes tipográficas <br>
 
-<li> [] General </li>
-[] Carpetas organizadas <br>
-[] Componentes separados <br>
-[] Código comentado <br>
-[] Repasar app, main e index <br>
-[] README final <br>
+<li> [✅] General </li>
+[✅] Carpetas organizadas <br>
+[✅] Componentes separados <br>
+[✅] Código comentado <br>
+[✅] Repasar app, main e index <br>
+[✅] README final <br>
 </ol>
