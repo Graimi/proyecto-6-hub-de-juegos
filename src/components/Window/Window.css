@@ -16,6 +16,7 @@
   transform: translate(-50%, -50%);
   background-color: var(--gm-color-blue-opaque);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: var(--gm-border-window-style);
   border-radius: var(--gm-radius-general);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
