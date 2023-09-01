@@ -1,12 +1,17 @@
 # Hub de juegos
 
-## PROYECTO 6: Hub de juegos - EN DESARROLLO
+## PROYECTO 6: Hub de juegos - FINALIZADO
 
-## Descripción
+## - Descripción
 
-Este proyecto puede llevarse al alcance que cada cual estime posible dentro de lo que hemos aprendido y sabemos poner el práctica. Vamos a crear un Hub de juegos en el que tendremos tres actividades sobre las que elegir.
+Este proyecto puede llevarse al alcance que cada cual estime posible dentro de lo que hemos aprendido y sabemos poner el práctica. Vamos a crear un hub de juegos en el que tendremos tres opciones disponibles. 
+- Tres en raya
+- Ahorcado
+- Sudoku
 
-## <a href="https://pasatiempos.netlify.app/">- ENLACE DE VISUALIZACIÓN </a>
+## - Despliegue
+<a href="https://pasatiempos.netlify.app/">- ENLACE DE VISUALIZACIÓN </a>
+<br>
 
 ## Requerimentos
 <ul>
